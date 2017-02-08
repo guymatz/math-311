@@ -9,4 +9,4 @@ pipelines:
   default:
     - step:
         script:
-          - echo "ps1.tex"
+          - echo $PATH
