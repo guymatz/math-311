@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{\textbf{Math 311 - Problem Set 1}}
+\author{Guy Matz}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{enumerate}  % begin numbers
+\item Let $X = \phi \ or \ Y = \phi$
+
+\begin{enumerate} % begin letters
+\item What is the set $X \times Y$
+\begin{align*}
+    X \times Y &= {(x,y) ; x \in X \ and\ y\in Y}
+\\             &= {(\phi, y) ; y \in Y } + {(x, \phi) ; x \in X }
+\\             &= \phi
+\end{align*}
+\item Let $X = \phi$, what is the set $F(X,Y)?$
+\begin{align*}
+    F(X,Y) &= \{f: f:X \to Y\}
+\\         &= \{f: f:\phi \to Y\}
+\\         &= \phi
+\end{align*}
+
+\item Let $X \neq \phi$ and $Y = \phi$, what is the set $F(X,Y)?$
+\begin{align*}
+    F(X,Y) &= \{f: f:X \to Y\}
+\\         &= \{f: f:X \to \phi\}
+\\         &= f:X \to \phi
+\end{align*}
+  
+\end{enumerate} % end letters
+
+\newpage
+
+% Q2
+\item
+
+\begin{enumerate} % begin letters
+\item Let $X, Y \neq \phi$ and suppose that every element of $F(X,Y)$ is injective.  Show that $|X| = 1$.
+\\ \\
+A function is defined as follows (From BB, p. 50):\\
+Let $S$ and $T$ be sets. A \emph{function} from $S$ to $T$ is a subset $F$ of $S \times T$ such that for each element $x \in S$ there is exactly one element  $y \in T$ such that $(x,y) \in F$
+\\ \\
+The only subset of $X$ that guarantees the "every element of $F(X,Y)$ is injective" is a singleton, since it is the only subset that will use every element in its domain
+%
+\\
+\item Let $X \neq \phi \neq Y$ and suppose that every element of $F(X,Y)$ is surjective.  Show that $|Y| = 1$.
+\\ \\
+The only subset of $Y$ that guarantees the "every element of $F(X,Y)$ is surjective" is a singleton, since it is the only subset that will use every element in its co-domain
+\\
+
+%\begin{align*}
+
+%\end{align*}
+\end{enumerate} % end letters
+
+\item % problem 3
+\begin{enumerate}
+\item Let $A_0 , A_1 \subseteq X$. Show that $f_∗ (A_0 ∪ A_1 ) = f_∗ (A_0) \cup f ∗ (A_1)$
+\\ \\
+Let $x \in (A_1 \cup A_2)$, wlog $x \in A_1$.  By definition, $f(x) \in f_*(A_1) \subseteq f_*(A_1) \cup f_*(A_2).$  We then conclude $f_*(A_1 \cup A_2) \subseteq f_*(A_1) \cup f_*(A_2)$.  Conversely, suppose $y \in f_*((A_1) \cup f_*(A_2))$, wlog $y \in f_*(A_1)$.  By definition, ?????? . . . We now conclude $f_*(A_1) \cup f_*(A_2) \subseteq f_*(A_1 \cup A_2)$.
+\\
+
+\item It is obvious that $f_∗(A_0 \cap A_1) \subseteq f_∗(A_0) \cap f_∗(A_1)$.  Give an
+example of a set $X$, non-empty subsets $A_1$ and $A_2$ of $X$ and
+$f : X \to Y$ such that $f_∗(A_0 \cap A_1) = f_∗(A_0) \cap f_∗(A_1)$. Hint:
+Take $X = \{1, 2, 3\}$ and $Y = \{1, 2\}$.
+\\ \\
+$f: \{1,2,3\} \to \{1,2\}$\\
+$f(1) = 1$\\
+$f(2) = 2$\\
+$f(3) = 2$\\
+$A_1 = \{1,2\}$\\
+$A_2 = \{1,3\}$\\
+$f_*(A_1) = \{1,2\}$\\
+$f_*(A_2) = \{1,2\}$\\
+$A_1 \cap A_2 = \{1\}, f_*(1) = \{1\}$\\
+
+\item Show that if $f : X \to Y$ is not surjective then for any subset $\phi \neq A,\   \overline{f_∗(A)} \neq f_∗(\overline{A})$.\\
+\\
+$A \subseteq X, f_*(A) \subseteq f_*(X)$\\
+$\overline{f_*(X)} \subseteq \overline{f_*(A)}$\\
+however,\\
+$\overline{f_*(X)} \cap f_*(X) = \phi$\\
+$\overline{f_*(X)} \cap f_*(something . . .?)$\\
+$f_*(\overline{A}) \subseteq f_*(X)$\\
+$f_*(\overline{A}) \nsubseteq \overline{f_*(A)}$\\
+\\
+\item Give an example of a surjection $f: X \to Y$ and $A \subseteq X$ such that $\overline{f_*(A)} \neq f_*(\overline{A})$\\
+\\
+\\
+$f_*(\{1,2\}) = \{1,2\}$\\
+$f_*(1,2) = \phi$\\
+$f_*(1,2) = f_*(3) = 3$
+\end{enumerate}
+
+\end{enumerate} % end numbers
+
+\end{document}
