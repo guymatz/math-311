@@ -9,4 +9,4 @@ pipelines:
   default:
     - step:
         script:
-          - pdflatex ps1.tex
+          - echo "ps1.tex"
