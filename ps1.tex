@@ -59,12 +59,13 @@ The only subset of $Y$ that guarantees the "every element of $F(X,Y)$ is surject
 
 %\end{align*}
 \end{enumerate} % end letters
+\newpage
 
 \item % problem 3
 \begin{enumerate}
-\item Let $A_0 , A_1 \subseteq X$. Show that $f_∗ (A_0 ∪ A_1 ) = f_∗ (A_0) \cup f ∗ (A_1)$
+\item Let $A_0 , A_1 \subseteq X$. Show that $f_*(A_0 \cup A_1 ) = f_*(A_0) \cup f_*(A_1)$
 \\ \\
-Let $x \in (A_1 \cup A_2)$, wlog $x \in A_1$.  By definition, $f(x) \in f_*(A_1) \subseteq f_*(A_1) \cup f_*(A_2).$  We then conclude $f_*(A_1 \cup A_2) \subseteq f_*(A_1) \cup f_*(A_2)$.  Conversely, suppose $y \in f_*((A_1) \cup f_*(A_2))$, wlog $y \in f_*(A_1)$.  By definition, ?????? . . . We now conclude $f_*(A_1) \cup f_*(A_2) \subseteq f_*(A_1 \cup A_2)$.
+Let $x \in (A_1 \cup A_2)$, wlog $x \in A_1$.  By definition, $f(x) \in f_*(A_1) \subseteq f_*(A_1) \cup f_*(A_2).$  We then conclude $f_*(A_1 \cup A_2) \subseteq f_*(A_1) \cup f_*(A_2)$.  Conversely, suppose $y \in f_*(A_1) \cup f_*(A_2)$, wlog $y \in f_*(A_1)$.  By definition, $y \in f_*(A_1 \cup A_2)$.  We can conclude $f_*(A_1) \cup f_*(A_2) \subseteq f_*(A_1 \cup A_2)$.
 \\
 
 \item It is obvious that $f_∗(A_0 \cap A_1) \subseteq f_∗(A_0) \cap f_∗(A_1)$.  Give an
@@ -82,13 +83,14 @@ $f_*(A_1) = \{1,2\}$\\
 $f_*(A_2) = \{1,2\}$\\
 $A_1 \cap A_2 = \{1\}, f_*(1) = \{1\}$\\
 
-\item Show that if $f : X \to Y$ is not surjective then for any subset $\phi \neq A,\   \overline{f_∗(A)} \neq f_∗(\overline{A})$.\\
+\item Show that if $f:X \to Y$ is not surjective then for any subset $\phi \neq A,\   \overline{f_∗(A)} \neq f_∗(\overline{A})$.\\
 \\
 $A \subseteq X, f_*(A) \subseteq f_*(X)$\\
 $\overline{f_*(X)} \subseteq \overline{f_*(A)}$\\
 however,\\
 $\overline{f_*(X)} \cap f_*(X) = \phi$\\
-$\overline{f_*(X)} \cap f_*(something . . .?)$\\
+% Do I need this here?  If so, then what!?
+% $\overline{f_*(X)} \cap f_*(something . . .?)$\\
 $f_*(\overline{A}) \subseteq f_*(X)$\\
 $f_*(\overline{A}) \nsubseteq \overline{f_*(A)}$\\
 \\
@@ -98,8 +100,58 @@ $f_*(\overline{A}) \nsubseteq \overline{f_*(A)}$\\
 $f_*(\{1,2\}) = \{1,2\}$\\
 $f_*(1,2) = \phi$\\
 $f_*(1,2) = f_*(3) = 3$
-\end{enumerate}
+\end{enumerate} % end of 3
+\newpage
+
+ % problem 4
+\item Investigate $f^*\mathcal{P}(Y) \to \mathcal{P}(X)$. State and prove results
+parallel to those of Problem 3. Hint: The results for intersections, and complements are different.\\
+
+\begin{enumerate}
+\item Let $A_0 , A_1 \subseteq \mathcal{P}(Y)$. Show that $f^*(A_0 \cup A_1 ) = f^*(A_0) \cup f^*(A_1)$
+\\ \\
+Let $y \in (A_0 \cup A_1)$, wlog $y \in A_0$.  By definition, $f^{-1}(y) \in f^*(A_0) \subseteq f^*(A_0) \cup f^*(A_1).$  We then conclude $f^*(A_0 \cup A_1) \subseteq f^*(A_0) \cup f^*(A_1)$.  Conversely, suppose $x \in f^*(A_0) \cup f^*(A_1)$, wlog $x \in f^*(A_0)$.  By definition, $x \in f^*(A_0 \cup A_1)$.  We can conclude $f^*(A_0) \cup f^*(A_1) \subseteq f^*(A_0 \cup A_1)$.
+\\
+
+\item Let $A_0 , A_1 \subseteq Y$. Show that $f^*(A_0 \cap A_1 ) = f^*(A_0) \cap f^*(A_1)$
+\\ \\
+Let $y \in (A_0 \cap A_1)$, wlog $y \in A_0$.  By definition, $f^{-1}(y) \in f^*(A_0) \subseteq f^*(A_0) \cap f^*(A_1).$  We then conclude $f^*(A_0 \cap A_1) \subseteq f^*(A_0) \cap f^*(A_1)$.  Conversely, suppose $x \in f^*(A_0) \cap f^*(A_1)$, wlog $x \in f^*(A_0)$.  By definition, $x \in f^*(A_0 \cap A_1)$.  We can conclude $f^*(A_0) \cap f^*(A_1) \subseteq f^*(A_0 \cap A_1)$.
+\\
+
+
+\item Show that if $f^{-1}:Y \to X$ is not surjective then for any subset $\phi \neq A,\   \overline{f^*(A)} \neq f^*(\overline{A})$.\\
+\\
+$A \subseteq Y, f^*(A) \subseteq f^*(Y)$\\
+$\overline{f^*(Y)} \subseteq \overline{f^*(A)}$\\
+however,\\
+$\overline{f^*(Y)} \cap f^*(Y) = \phi$\\
+% Do I need this here?  If so, then what!?
+% $\overline{f^*(X)} \cap f^*(something . . .?)$\\
+$f^*(\overline{A}) \subseteq f^*(Y)$\\
+$f^*(\overline{A}) \nsubseteq \overline{f^*(A)}$\\
+\\
+\item Give an example of a surjection $f^{-1}: Y \to X$ and $A \subseteq Y$ such that $\overline{f^*(A)} \neq f^*(\overline{A})$\\
+\\
+$f^*(\{1,2\}) = \{1,2\}$\\
+$f^*(1,2) = \phi$\\
+$f^*(1,2) = f^*(3) = 3$
+\end{enumerate} % end of 4
+\newpage
+
+\item Let $f:X \to Y$ and $X \neq \phi$
+\begin{enumerate}
+\item Show that $f$ is injective if and only if $f$ has a left inverse\\
+$\Rightarrow$Assume $f$ is injective.\\
+There is a function $g:B \to A$ such that $g \circ f = id_X$.  Let $d \in X$, and define $g$ on an input $y$ as:
+\begin{enumerate}
+\item If there exists some $x \in X$ with $f(x) = y$, then we will let $g(y) = x$  By Problem \#1 (?), there is at most one x.
+\item If y is not in the image of $f$, then $g(y) = d$
+So, for any $x$, $(g \circ)(x) = x$.  By definition of $g$, since $y = f(x)$ is in the image of $f, g(y)$ is defined by the first rule (above) to be $x$.  Thus $g \circ f = id_X$. 
+\end{enumerate} % end of function def'
+$\Leftarrow$Assume $f$ has a left inverse, $g$.\\
+If $f(x) = f(y)$ then $g(f(x)) = g(f(y))$. By definitionof $g$, $x = g(f(x))$ and $g(f(y)) = y$, and so $x = g(f(x)) = g(f(y)) = y$\\
+\item Show that if $f$ has a left inverse, then $f$ is surjective\\
+\end{enumerate} % end of 5
 
 \end{enumerate} % end numbers
-
 \end{document}
