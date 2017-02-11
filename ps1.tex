@@ -58,9 +58,8 @@ The only subset of $Y$ that guarantees the "every element of $F(X,Y)$ is surject
 Let $x \in (A_1 \cup A_2)$, wlog $x \in A_1$.  By definition, $f(x) \in f_*(A_1) \subseteq f_*(A_1) \cup f_*(A_2).$  We then conclude $f_*(A_1 \cup A_2) \subseteq f_*(A_1) \cup f_*(A_2)$.  Conversely, suppose $y \in f_*(A_1) \cup f_*(A_2)$, wlog $y \in f_*(A_1)$.  By definition, $y \in f_*(A_1 \cup A_2)$.  We can conclude $f_*(A_1) \cup f_*(A_2) \subseteq f_*(A_1 \cup A_2)$.
 \\
 
-\item It is obvious that $f_∗(A_0 \cap A_1) \subseteq f_∗(A_0) \cap f_∗(A_1)$.  Give an
-example of a set $X$, non-empty subsets $A_1$ and $A_2$ of $X$ and
-$f : X \to Y$ such that $f_∗(A_0 \cap A_1) = f_∗(A_0) \cap f_∗(A_1)$. Hint:
+\item It is obvious that $f_*(A_0 \cap A_1) \subseteq f_*(A_0) \cap f_*(A_1)$.  Give an example of a set $X$, non-empty subsets $A_1$ and $A_2$ of $X$ and
+$f : X \to Y$ such that $f_*(A_0 \cap A_1) \neq f_*(A_0) \cap f_*(A_1)$. Hint:
 Take $X = \{1, 2, 3\}$ and $Y = \{1, 2\}$.
 \\ \\
 Let $f: X \to Y$ be defined by $f: \{1,2,3\} \to \{1,2\}$
@@ -73,10 +72,10 @@ A_1 &= \{1,3\}\\
 f_*(A_0) &= \{1,2\}\\
 f_*(A_1) &= \{1,2\}\\
 A_0 \cap A_1 &= \{1\}\\
-f_*(1) &= \{1\}\\
-f(A_0) \cap f(A_1) &= \{1\}
+f_*(A_0 \cap A_1) = f(1) &= \{1\}\\
+f_*(A_0) \cap f_*(A_1) &= \{1,2\}
 \end{align*}
-\item Show that if $f:X \to Y$ is not surjective then for any subset $\phi \neq A,\   \overline{f_∗(A)} \neq f_∗(\overline{A})$.\\
+\item Show that if $f:X \to Y$ is not surjective then for any subset $\phi \neq A, \overline{f_*(A)} \neq f_*(\overline{A})$.\\
 \\
 $A \subseteq X, f_*(A) \subseteq f_*(X)$\\
 $\overline{f_*(X)} \subseteq \overline{f_*(A)}$\\
