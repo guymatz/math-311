@@ -145,8 +145,82 @@ So, for any $x$, $(g \circ)(x) = x$.  By definition of $g$, since $y = f(x)$ is 
 \end{enumerate} % end of function def'
 $\Leftarrow$Assume $f$ has a left inverse, $g$.\\
 If $f(x) = f(y)$ then $g(f(x)) = g(f(y))$. By definitionof $g$, $x = g(f(x))$ and $g(f(y)) = y$, and so $x = g(f(x)) = g(f(y)) = y$\\
-\item Show that if $f$ has a left inverse, then $f$ is surjective\\
+\item Show that if $f$ has a left inverse, then $f$ is surjective\\\\
+\\
+\item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse
+$g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
 \end{enumerate} % end of 5
+
+\newpage
+% Q6
+\item \textbf{Lemma 1}: If $f:X \to Y$ is bijective then $f$ has a right inverse
+\begin{enumerate}
+\item Just refererring to this lemma and the results of Problem 5, give a proof of BB proposition 2.1.7. Do not just recopy the proof of BB proposition 2.17.\\
+\item Let $f: X_1 X_2$.  Show that $(f^{-1})^{-1} = f$
+\end{enumerate}
+% end Q6
+
+\newpage
+% Q7
+\item
+\begin{enumerate}
+\item Show that if $f :X_1 \hookrightarrow X_2$ and $g :X_2 \hookrightarrow X_3$ then $g \circ f: X_1 \hookrightarrow X_3$\\
+\item Formulate and prove the corresponding result for surjections.\\
+\item Formulate the corresponding result for bijections. Prove it by simply referring to previous results.
+\item Let $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$.  Show that $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$\\
+\end{enumerate}
+% end Q7
+
+
+\newpage
+% Q8
+\item We denote the set $\{f in F(X) : f \to X \to X\}$ by $O(X, X)$, and the set $\{f in F(X, X) : f : X \twoheadrightarrow X$ by $T(X, X)$.  $S_X = O(X,X) \cap T(X,X)$
+\begin{enumerate}
+\item What previous result show that $O(X, X)$ is closed?\\
+\item What previous result show that $T(X, X)$ is closed?\\
+\item What previous result show that $S_X$ is closed?\\
+\end{enumerate}
+% end Q8
+
+\newpage
+% Q9 
+\item What result in BB shows that we have a function $I : S_X \to S_X$ given by $s(f) = g$ such that $g \circ f = Id_X = f \circ g$? Equivalently $I(f) = f^{-1}$ is a \emph{function}\\
+% end Q9
+
+\newpage
+% Q10 
+\item Let $A$ and $B$ be cofinite subsets of $X$.\\
+\begin{enumerate}
+\item Show that $A \cup B$ is cofinite.\\
+\item Show that $A \cap B$ is cofinite.\\
+\end{enumerate}
+% end Q10
+
+\newpage
+% Q11
+\item
+\begin{enumerate}
+\item Show that Co$(X)$ is closed under composition.  Hint: Show that Fix$(f) \cap$ Fix$(g) \subseteq$ Fix($f \circ g$).
+\item Show that if $f \in S_X$ is cofinite, so is $f^{-1}$.
+\end{enumerate}
+% end Q11
+
+\newpage
+% Q12
+\item Show that Co($X$) is conjugate invariant
+% end Q12
+
+\newpage
+% Q13
+\item Define a relation $\sim$ on $F(X, X)$ by $f \sim g$ if there is an $\omega \in S_X$ such that $f = \omega \circ g \circ \omega^{-1}$.  Show that $\sim$ is an
+equivalence relation.
+% end Q13
+
+\newpage
+% Q14
+\item Let $X$ be a set and define a relation $\sim$ on $\mathcal{P}(X)$ by $A \sim B$ if there exists a bijection $f:A \leftrightarrow B$.  Prove that $\sim$ is an
+equivalence relation.
+% end Q14
 
 \end{enumerate} % end numbers
 \end{document}
