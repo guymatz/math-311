@@ -194,15 +194,18 @@ Show that if $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$ then 
 
 \newpage
 % Q9 
-\item What result in BB shows that we have a function $\mathcal{I} : S_X \to S_X$ given by $s(f) = g$ such that $g \circ f = Id_X = f \circ g$? Equivalently $\mathcal{I}(f) = f^{-1}$ is a \emph{function}\\
+\item What result in BB shows that we have a function $\mathcal{I} : S_X \to S_X$ given by $s(f) = g$ such that $g \circ f = Id_X = f \circ g$? Equivalently $\mathcal{I}(f) = f^{-1}$ is a \emph{function}\\\\
+We are looking for a result that shows that any $f \in S_x$ has a unique inverse.  Proposition 2.1.7 shows this result.
 % end Q9
 
 \newpage
 % Q10 
 \item Let $A$ and $B$ be cofinite subsets of $X$.\\
 \begin{enumerate}
-\item Show that $A \cup B$ is cofinite.\\
-\item Show that $A \cap B$ is cofinite.\\
+\item Show that $A \cup B$ is cofinite.\\\\
+We need to show that $\overline{A \cup B}$ is finite.  $\overline{A \cup B} = \overline{A} \cap \overline{B}$. Since $A$ and $B$ are both cofinite subsets of $X$, so are both $\overline{A}$ and $\overline{B}$ cofinite.  The intersection of two finite sets is finite.
+\item Show that $A \cap B$ is cofinite.\\\\
+We need to show that $\overline{A \cap B}$ is finite.  $\overline{A \cap B} = \overline{A} \cup \overline{B}$. Since $A$ and $B$ are both cofinite subsets of $X$, so are both $\overline{A}$ and $\overline{B}$ cofinite.  The union of two finite sets is finite.
 \end{enumerate}
 % end Q10
 
