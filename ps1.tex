@@ -15,7 +15,7 @@
 
 \begin{enumerate} % begin letters
 \item What is the set $X \times Y$\\ \\
-Since all mappings will be of the form $(x,\phi) \vee (\phi,y)$, $X \times Y = \phi$\\
+The results of the cross will have no first component and/or no second component, therefore, $X \times Y = \phi$\\
 \item Let $X = \phi$, what is the set $F(X,Y)?$
 \begin{align*}
 F(X,Y) &= \{f: f:X \to Y\}
@@ -24,7 +24,7 @@ F(X,Y) &= \{f: f:X \to Y\}
 \end{align*}
 
 \item Let $X \neq \phi$ and $Y = \phi$, what is the set $F(X,Y)?$\\ \\
-Let $f \in F$ be a function that maps $X \to Y$.  Since all mappings will be of the form $(x,\phi)$, no $f$ satifies the definition of a function, therefore $F(X,Y) = \phi$  
+Let $f \in F$ be a function that maps $X \to Y$.  The resulting pairs of the mapping will have no second component, therefore, $X \times Y = \phi$\\
 \end{enumerate} % end letters
 
 \newpage
@@ -62,11 +62,11 @@ Let $x \in (A_1 \cup A_2)$, wlog $x \in A_1$.  By definition, $f(x) \in f_*(A_1)
 $f : X \to Y$ such that $f_*(A_0 \cap A_1) \neq f_*(A_0) \cap f_*(A_1)$. Hint:
 Take $X = \{1, 2, 3\}$ and $Y = \{1, 2\}$.
 \\ \\
-Let $f: X \to Y$ be defined by $f: \{1,2,3\} \to \{1,2\}$
+Let $f: X \to Y$ be defined by $f: \{1,2,3\} \to \{1,2\}$ where\\
+$$f(1) = 1, 
+f(2) = 2, 
+f(3) = 2$$
 \begin{align*}
-f(1) &= 1\\
-f(2) &= 2\\
-f(3) &= 2\\
 A_0 &= \{1,2\}\\
 A_1 &= \{1,3\}\\
 f_*(A_0) &= \{1,2\}\\
@@ -75,24 +75,19 @@ A_0 \cap A_1 &= \{1\}\\
 f_*(A_0 \cap A_1) = f(1) &= \{1\}\\
 f_*(A_0) \cap f_*(A_1) &= \{1,2\}
 \end{align*}
+Therefore $f_*(A_0 \cap A_1) \neq f_*(A_0) \cap f_*(A_1)$
+\\
+% 3c
 \item Show that if $f:X \to Y$ is not surjective then for any subset $\phi \neq A, \overline{f_*(A)} \neq f_*(\overline{A})$.\\
 \\
-$A \subseteq X, f_*(A) \subseteq f_*(X)$\\
-$\overline{f_*(X)} \subseteq \overline{f_*(A)}$\\
-however,\\
-$\overline{f_*(X)} \cap f_*(X) = \phi$\\
-% Do I need this here?  If so, then what!?
-% $\overline{f_*(X)} \cap f_*(something . . .?)$\\
-$f_*(\overline{A}) \subseteq f_*(X)$\\
-$f_*(\overline{A}) \nsubseteq \overline{f_*(A)}$\\
+Since $f$ is not surjective ther is a $y_0 \in Y$ such that $y_0 \notin f_*(X)$.  Let $A \subseteq X$ be non-empty.  Since $y_0 \notin f_*(X), y_0 \notin f_*(\overline{A})$, which means that it must be in $\overline{f_*(A)}$, and, therefore, $f_*(\overline{A}) \neq \overline{f_*(A)}$
 \\
 \item Give an example of a surjection $f: X \to Y$ and $A \subseteq X$ such that $\overline{f_*(A)} \neq f_*(\overline{A})$\\
-\\
-\\
+Let $f$ be defined as in 2b above and let $A \subset X$, where $A = \{1,2\}$
 \begin{align*}
 f_*(\{1,2\}) &= \{1,2\}\\
-f_*(1,2) &= \phi\\
-f_*(1,2) &= f_*(3) = 3
+\overline{f_*(\{1,2\})} &= \phi\\
+f_*(\overline{\{1,2\}}) &= f_*(\{3\}) = \{2\}
 \end{align*}
 \end{enumerate} % end of 3
 \newpage
@@ -132,18 +127,13 @@ $f^*(1,2) = f^*(3) = 3$
 \end{enumerate} % end of 4
 \newpage
 
+% Q5
 \item Let $f:X \to Y$ and $X \neq \phi$
 \begin{enumerate}
 \item Show that $f$ is injective if and only if $f$ has a left inverse\\
-$\Rightarrow$Assume $f$ is injective.\\
-There is a function $g:B \to A$ such that $g \circ f = id_X$.  Let $d \in X$, and define $g$ on an input $y$ as:
-\begin{enumerate}
-\item If there exists some $x \in X$ with $f(x) = y$, then we will let $g(y) = x$  By Problem \#1 (?), there is at most one x.
-\item If y is not in the image of $f$, then $g(y) = d$
-So, for any $x$, $(g \circ)(x) = x$.  By definition of $g$, since $y = f(x)$ is in the image of $f, g(y)$ is defined by the first rule (above) to be $x$.  Thus $g \circ f = id_X$. 
-\end{enumerate} % end of function def'
-$\Leftarrow$Assume $f$ has a left inverse, $g$.\\
-If $f(x) = f(y)$ then $g(f(x)) = g(f(y))$. By definitionof $g$, $x = g(f(x))$ and $g(f(y)) = y$, and so $x = g(f(x)) = g(f(y)) = y$\\
+$\Leftarrow$Assume $f$ has an inverse.\\
+
+$\Rightarrow$Assume $f$ is injective\\
 \item Show that if $f$ has a left inverse, then $f$ is surjective\\\\
 \\
 \item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse
@@ -183,7 +173,7 @@ $g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
 
 \newpage
 % Q9 
-\item What result in BB shows that we have a function $I : S_X \to S_X$ given by $s(f) = g$ such that $g \circ f = Id_X = f \circ g$? Equivalently $I(f) = f^{-1}$ is a \emph{function}\\
+\item What result in BB shows that we have a function $\mathcal{I} : S_X \to S_X$ given by $s(f) = g$ such that $g \circ f = Id_X = f \circ g$? Equivalently $\mathcal{I}(f) = f^{-1}$ is a \emph{function}\\
 % end Q9
 
 \newpage
@@ -207,19 +197,48 @@ $g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
 \newpage
 % Q12
 \item Show that Co($X$) is conjugate invariant
+\\
+\\
+Let $f \in $ Co($X$), $g \in S_X$.  We want to show that $g \circ f \circ g^{-1}$ is confinite.\\
 % end Q12
 
 \newpage
 % Q13
-\item Define a relation $\sim$ on $F(X, X)$ by $f \sim g$ if there is an $\omega \in S_X$ such that $f = \omega \circ g \circ \omega^{-1}$.  Show that $\sim$ is an
-equivalence relation.
+\item Define a relation $\sim$ on $F(X, X)$ by $f \sim g$ if there is an $\omega \in S_X$ such that $f = \omega \circ g \circ \omega^{-1}$.  Show that $\sim$ is an equivalence relation.\\
+\\
+To be an equivalance relation, the relation $\sim$ must satisfy the following properties:
+\begin{enumerate}
+\item Reflexive Law; $f \sim f$\\
+$f = \omega \circ f \circ \omega^{-1}$.  Let $\omega = Id_X,$ then $f = Id_X \circ f \circ Id_X^{-1} = f$ 
+\item Symmetric Law; If $f \sim g$, then $g \sim f$\\
+Let $f = \omega \circ g \circ \omega^{-1}$\\
+Then $g = \omega^{-1} \circ f \circ \omega = (\omega^{-1}) \circ f \circ (\omega^{-1})^{-1}$
+\item Transitive Law; If $f \sim g$ and $g \sim h$, then $f \sim h$\\
+Let $f = \omega \circ g \circ \omega^{-1}$\\
+and $g = \omega \circ h \circ \omega^{-1}$\\
+Then $f = \omega \circ \omega \circ h \circ \omega^{-1} \circ \omega^{-1} = (\omega^2) \circ h \circ (\omega^2)^{-1}$
+\end{enumerate}
 % end Q13
 
 \newpage
 % Q14
-\item Let $X$ be a set and define a relation $\sim$ on $\mathcal{P}(X)$ by $A \sim B$ if there exists a bijection $f:A \leftrightarrow B$.  Prove that $\sim$ is an
-equivalence relation.
+\item Let $X$ be a set and define a relation $\sim$ on $\mathcal{P}(X)$ by $A \sim B$ if there exists a bijection $f:A \leftrightarrow B$.  Prove that $\sim$ is an equivalence relation.
 % end Q14
-
+\\\\
+To be an equivalance relation, the relation $\sim$ must satisfy the following properties:
+\begin{enumerate}
+\item Reflexive Law; $A \sim A$\\
+\\
+Let $f = Id_X$, then $f(A) = A$\\
+\item Symmetric Law; If $A \sim B$, then $B \sim A$\\
+\\Since $f$ is bijective, there exists $f^{-1}$ such that\\
+$f^*(B) = A$
+\\
+\item Transitive Law; If $A \sim B$ and $B \sim C$, then $A \sim C$\\
+\\
+Let $f:A \leftrightarrow B$ and $g:B \leftrightarrow C$
+\\
+Since $f_*(A) = B$ and $g_*(B) = C$, and both $f$ and $g$ are bijective, we have $(g \circ f)(A) = C$
+\end{enumerate}
 \end{enumerate} % end numbers
 \end{document}
