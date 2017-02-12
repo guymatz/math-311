@@ -131,13 +131,20 @@ $f^*(1,2) = f^*(3) = 3$
 \item Let $f:X \to Y$ and $X \neq \phi$
 \begin{enumerate}
 \item Show that $f$ is injective if and only if $f$ has a left inverse\\
-$\Leftarrow$Assume $f$ has an inverse.\\
-
+$\Leftarrow$Assume $f$ has a left inverse.\\
+Let $g : Y \to X$ such that $g \circ f = Id_X$ be the left inverse of $f$.  We want to show that $f$ in injective.  Let $x_1, X2 \in X$.  Then $f(x_1) = f(x_2)$, and $(g(f(x_1)) = g(f(x_2))$, so $x_1 = x_2$ which shows injectivity.\\\\
 $\Rightarrow$Assume $f$ is injective\\
+We want to find a left inverse, $g : Y \to X$, such that $g \circ f = Id_X$.
 \item Show that if $f$ has a left inverse, then $f$ is surjective\\\\
+Let $f$ be a left inverse $g : Y \to X$ such that  $g \circ f = Id_X$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$
+% MORE HERE
 \\
-\item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse
-$g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
+\item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse\\
+$g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.\\
+\\
+$$(g_l \circ f) \circ g_r = g_l \circ (f \circ g_r)$$
+$$Id_X \circ g_r = g_l \circ Id_X$$
+$$g_r = g_l$$
 \end{enumerate} % end of 5
 
 \newpage
@@ -145,7 +152,10 @@ $g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
 \item \textbf{Lemma 1}: If $f:X \leftrightarrow Y$ is bijective then $f$ has a right inverse
 \begin{enumerate}
 \item Just refererring to this lemma and the results of Problem 5, give a proof of BB proposition 2.1.7.\\
-\item Let $f: X_1 \leftrightarrow X_2$.  Show that $(f^{-1})^{-1} = f$
+\\
+By 5a we have shown that if $f$ has a left inverse then it is injective.  Using the Lemma we may go on to say that if $f$ has \emph{any} inverse, then it is injective.  By 5b we know that $f$ is surjective.  Using the two results and the Lemma we can say that $f$ is bijective\\
+\item Let $f: X_1 \leftrightarrow X_2$.  Show that $(f^{-1})^{-1} = f$\\\\
+Let $x_1 \in X_1$.  Since $f$ is bijective we have that $f(x_1) = x_2 \in X_2$ and $f^{-1}(x_2) = x_1 \in X_1$.  Using composition we can say $f^{-1} \circ f^{-1}(x_2) = f^{-1}(f^{-1}(x_2)) = f^{-1}(x_1) = x_2 \in X_2$, which is our definition of $f$.
 \end{enumerate}
 % end Q6
 
@@ -153,9 +163,17 @@ $g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.
 % Q7
 \item
 \begin{enumerate}
-\item Show that if $f :X_1 \hookrightarrow X_2$ and $g :X_2 \hookrightarrow X_3$ then $g \circ f: X_1 \hookrightarrow X_3$\\
+\item Show that if $f :X_1 \hookrightarrow X_2$ and $g :X_2 \hookrightarrow X_3$ then $g \circ f: X_1 \hookrightarrow X_3$\\\\
+% Do I need more here?  I don't use the definition of injectivity . . .
+Let $x_{1a},x_{1b} \in X1, x_{2a},x_{2b} \in X_2, x_{3a},x_{3b} \in X_3$.  Then,\\
+$$g \circ f(x_{1a}) = g(f(x_{1a})) = g(x_{2a}) = x_{3a} \in X_3$$
+% Now I guess I need to say that x_1a = x_1b, x_2a = x_2b and x_3a = x_3b?
+\\
+
 \item Formulate and prove the corresponding result for surjections.\\
-\item Formulate the corresponding result for bijections. Prove it by simply referring to previous results.
+Show that if $f :X_1 \twoheadrightarrow X_2$ and $g :X_2 \twoheadrightarrow X_3$ then $g \circ f: X_1 \twoheadrightarrow X_3$\\\\
+\item Formulate the corresponding result for bijections. Prove it by simply referring to previous results.\\
+Show that if $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$ then $g \circ f: X_1 \leftrightarrow X_3$\\\\
 \item Let $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$.  Show that $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$\\
 \end{enumerate}
 % end Q7
