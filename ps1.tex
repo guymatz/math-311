@@ -213,7 +213,14 @@ We need to show that $\overline{A \cap B}$ is finite.  $\overline{A \cap B} = \o
 % Q11
 \item
 \begin{enumerate}
-\item Show that Co$(X)$ is closed under composition.  Hint: Show that Fix$(f) \cap$ Fix$(g) \subseteq$ Fix($f \circ g$).
+\item Show that Co$(X)$ is closed under composition.  Hint: Show that Fix$(f) \cap$ Fix$(g) \subseteq$ Fix($f \circ g$).\\
+\\
+$$Fix(f) = \{x\in X; f(x) = x\}$$
+$$Co(X) = \{f : Fix(f)\ is\ cofinite\}$$
+\\
+We want to show that if $f,g \in Co(X)$, then $f \circ g \in Co(X)$\\
+Fix($f$), Fix($g$) are cofinite.  By Problem 10, Fix($f$) $\cap$ Fix $g$ is cofinite, 
+\\
 \item Show that if $f \in S_X$ is cofinite, so is $f^{-1}$.
 \end{enumerate}
 % end Q11
