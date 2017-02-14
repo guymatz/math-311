@@ -132,11 +132,11 @@ $f^*(1,2) = f^*(3) = 3$
 \begin{enumerate}
 \item Show that $f$ is injective if and only if $f$ has a left inverse\\
 $\Leftarrow$Assume $f$ has a left inverse.\\
-Let $g : Y \to X$ such that $g \circ f = Id_X$ be the left inverse of $f$.  We want to show that $f$ in injective.  Let $x_1, X2 \in X$.  Then $f(x_1) = f(x_2)$, and $(g(f(x_1)) = g(f(x_2))$, so $x_1 = x_2$ which shows injectivity.\\\\
+Let $g : Y \to X$ such that $g \circ f = Id_X$ be the left inverse of $f$.  We want to show that $f$ in injective.  Let $x_1, x_2 \in X$.  Then $f(x_1) = f(x_2)$, and $(g(f(x_1)) = g(f(x_2))$, so $x_1 = x_2$ which shows injectivity.\\\\
 $\Rightarrow$Assume $f$ is injective\\
-We want to find a left inverse, $g : Y \to X$, such that $g \circ f = Id_X$.
-\item Show that if $f$ has a left inverse, then $f$ is surjective\\\\
-Let $f$ be a left inverse $g : Y \to X$ such that  $g \circ f = Id_X$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$
+We want to find a left inverse, $g : Y \to X$, such that $g \circ f = Id_X$.  Picking an arbitrary $y_0 \in Y$ such that $y_0 = f(x_0)$, we want to have $g(y_0) = x_0$. This makes sense because there is exactly one such $x_0$ by injection. . . .
+\item Show that if $f$ has a right inverse, then $f$ is surjective\\\\
+Let $f$ have a right inverse $g : Y \to X$ such that  $f \circ g = Id_Y$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$.  Let $y_0$ be an arbitrary element of $Y$.  Is there $x_0 \in X$ such that $f(x_0) = y_0$?  Since $f$ has a right inverse, $g_r$, . . .
 % MORE HERE
 \\
 \item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse\\
@@ -164,17 +164,19 @@ Let $x_1 \in X_1$.  Since $f$ is bijective we have that $f(x_1) = x_2 \in X_2$ a
 \item
 \begin{enumerate}
 \item Show that if $f :X_1 \hookrightarrow X_2$ and $g :X_2 \hookrightarrow X_3$ then $g \circ f: X_1 \hookrightarrow X_3$\\\\
-% Do I need more here?  I don't use the definition of injectivity . . .
-Let $x_{1a},x_{1b} \in X1, x_{2a},x_{2b} \in X_2, x_{3a},x_{3b} \in X_3$.  Then,\\
-$$g \circ f(x_{1a}) = g(f(x_{1a})) = g(x_{2a}) = x_{3a} \in X_3$$
-% Now I guess I need to say that x_1a = x_1b, x_2a = x_2b and x_3a = x_3b?
+Let $x_{1a}, x_{1b} \in X1, x_{2a}, x_{2b} \in X2, x_3 \in X_3$
+We want to show that if $g \circ f(x_{1a}) = f(x_{1b})$, then $x_{1a} = x_{1b}$.  Suppose $(g \circ f)(x_{1a}) = (g \circ f)(x_{1b}) = x_3$.  Then $g(f(x_{1a})) = g(f(x_{1b}))$.  Now let $f(x_{1a}) = x_{2a} \in X_2, f(x_{2b}) = x_{2b} \in X_2$ such that $g(x_{2a}) = g(x_{2b})$.  Since $g : X_2 \to X_3$ is injective and $g(x_{2a}) = g(x_{2b})$ it must be that $x_{2a} = x_{2b}$.  Which means that $f(x_{1a}) = f(x_{1b})$, and so $x_{1a} = x_{1b}$
 \\
-
 \item Formulate and prove the corresponding result for surjections.\\
 Show that if $f :X_1 \twoheadrightarrow X_2$ and $g :X_2 \twoheadrightarrow X_3$ then $g \circ f: X_1 \twoheadrightarrow X_3$\\\\
+We want to show that $\forall x_3 \in X_3 \exists x_1 \in X_1$ such that $g \circ f(x_1) = x_3$.  Let $x_3 \in X_3$.  Since $g : X_2 \to X_3$ is surjective, $\exists x_2 \in X_2$ such that $g(x_2) = x_3$.  And, since $f : X_1 \to X_2$ is surjective, $\exists x_1 \in X_1$ such that $f(x_1) = x_2$.  Therefore, 
+$$g \circ f(x_1) = g(f(x_1)) = g(x_2) = x_3$$
 \item Formulate the corresponding result for bijections. Prove it by simply referring to previous results.\\
 Show that if $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$ then $g \circ f: X_1 \leftrightarrow X_3$\\\\
-\item Let $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$.  Show that $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$\\
+% Do i need more here?
+See 7a & 7b above.
+\item Let $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$.  Show that $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$\\\\
+% ?????
 \end{enumerate}
 % end Q7
 
