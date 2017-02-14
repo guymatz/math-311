@@ -174,16 +174,21 @@ $$g \circ f(x_1) = g(f(x_1)) = g(x_2) = x_3$$
 \item Formulate the corresponding result for bijections. Prove it by simply referring to previous results.\\
 Show that if $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$ then $g \circ f: X_1 \leftrightarrow X_3$\\\\
 % Do i need more here?
-See 7a \& 7b above.
+Assuming $f$ and $g$ are bijections, we want to show that $g \circ f$ is a bijection.  Being bijections, both $f$ and $g$ are injective and surjective.  As shown above in 7.1 and 7.2, the composition of injective functions is injective and the composition of surjective functions is surjective, so the $g \circ f$ is bijective.
 \\
 \item Let $f :X_1 \leftrightarrow X_2$ and $g :X_2 \leftrightarrow X_3$.  Show that $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$\\\\
-Let $x \in X_1$.  We want to show that 
-$$(g \circ f)^{-1}(x) = (f^{-1} \circ g^{-1})(x)$$
-Since $f(x_1) = x_2 \in X_2$, and $g(x_2) = x_3 \in X_3$, we have that $f^{-1}(x_2) = x_1 \in X_1$, and $g^{-1}(x_3) = x_2 \in X_2$.  Unravelling the composition we have
+Since $(g \circ f) \circ (g \circ f)^{-1} = Id_X$, we have\\
 \begin{align*}
-g^{-1}(f^{-1}(x_2)) &= f^{-1}((g^{-1})(x_3))\\
-g^{-1}(x_1) &= f^{-1}(x_2)\\
-x_2 &= x_1 ???
+(g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+((f^{-1} \circ g^{-1}) \circ (g \circ f)) \circ (g \circ f)^{-1} =& (f^{-1} \circ g^{-1}) \circ ((g \circ f) \circ (g \circ f)^{-1})\\
+((f^{-1} \circ g^{-1}) \circ (g \circ f)) \circ (g \circ f)^{-1} =& (f^{-1} \circ g^{-1}) \circ ((g \circ f) \circ (g \circ f)^{-1})\\
+((f^{-1} \circ g^{-1}) \circ (g \circ f)) \circ (g \circ f)^{-1} =& (f^{-1} \circ g^{-1}) \circ Id_X\\
+(((f^{-1} \circ g^{-1}) \circ g) \circ f) \circ (g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+((f^{-1} \circ (g^{-1} \circ g) \circ f) \circ (g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+((f^{-1} \circ Id_X) \circ f) \circ (g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+((f^{-1} \circ f) \circ (g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+Id_X \circ (g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
+(g \circ f)^{-1} =& f^{-1} \circ g^{-1}\\
 \end{align*}
 \end{enumerate}
 % end Q7
