@@ -134,10 +134,10 @@ $f^*(1,2) = f^*(3) = 3$
 $\Leftarrow$Assume $f$ has a left inverse.\\
 Let $g : Y \to X$ such that $g \circ f = Id_X$ be the left inverse of $f$.  We want to show that $f$ in injective.  Let $x_1, x_2 \in X$.  Then $f(x_1) = f(x_2)$, and $(g(f(x_1)) = g(f(x_2))$, so $x_1 = x_2$ which shows injectivity.\\\\
 $\Rightarrow$Assume $f$ is injective\\
-We want to find a left inverse, $g : Y \to X$, such that $g \circ f = Id_X$.  Picking an arbitrary $y_0 \in Y$ such that $y_0 = f(x_0)$, we want to have $g(y_0) = x_0$. This makes sense because there is exactly one such $x_0$ by injection. . . .
+Let $x_0 \in X$ .  We want to show that $\forall y \in f^*(X), \exists! x:f(x) = y.$  $x$ exists since $f$ is injective, and $y \in f^*(X)$.  Now define $g_l : Y \to X$ as $g_l(y) = x_0$ if $y \notin f^*(X)$, otherwise, $g_l(y) = x$.  Since $f(x) \in f^*(X)$ we have $g_l(f(x)) = x$, and thus $(g_l \circ f)(x) = Id_X(x)$
 \item Show that if $f$ has a right inverse, then $f$ is surjective\\\\
-Let $f$ have a right inverse $g : Y \to X$ such that  $f \circ g = Id_Y$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$.  Let $y_0$ be an arbitrary element of $Y$.  Is there $x_0 \in X$ such that $f(x_0) = y_0$?  Since $f$ has a right inverse, $g_r$, . . .
-% MORE HERE
+Let $f$ have a right inverse $g : Y \to X$ such that  $f \circ g = Id_Y$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$.  Let $y$ be an arbitrary element of $Y$.  Since $f$ has a right inverse, $g_r$, for any $x$,
+$$f(x) = f(g_r(y)) = f \circ g_r(y) = Id_Y = y$$
 \\
 \item Show that if $f$ has a left inverse $g_l$ and $f$ has a right inverse\\
 $g_r$ then $g_l = g_r$. Use $(g_l \circ f) \circ g_r = g_l ◦ (f \circ g_r )$.\\
@@ -218,7 +218,7 @@ We are looking for a result that shows that any $f \in S_x$ has a unique inverse
 \item Let $A$ and $B$ be cofinite subsets of $X$.\\
 \begin{enumerate}
 \item Show that $A \cup B$ is cofinite.\\\\
-We need to show that $\overline{A \cup B}$ is finite.  $\overline{A \cup B} = \overline{A} \cap \overline{B}$. Since $A$ and $B$ are both finite subsets of $X$, so are both $\bar{A}$ and $\bar{B}$ finite.  The intersection of two finite sets is finite.
+We need to show that $\overline{A \cup B}$ is finite.  $\overline{A \cup B} = \bar{A} \cap \bar{B}$. Since $A$ and $B$ are both finite subsets of $X$, so are both $\bar{A}$ and $\bar{B}$ finite.  The intersection of two finite sets is finite.
 \item Show that $A \cap B$ is cofinite.\\\\
 We need to show that $\overline{A \cap B}$ is finite.  $\overline{A \cap B} = \bar{A} \cup \bar{B}$. Since $A$ and $B$ are both finite subsets of $X$, both $\bar{A}$ and $\bar{B}$ are finite.  The union of two finite sets is finite.
 \end{enumerate}
