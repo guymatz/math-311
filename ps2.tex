@@ -8,12 +8,44 @@
 
 %\maketitle
 
-%\newpage
+%\newpage % Q1
 
 \begin{enumerate}  % begin numbers
 \item Prove that if $X \subseteq \mathbb{Z}$ is finite and non-empty, then $X$ has a least element.\\
 \\
 "The Well Ordering Axiom ... asserts that every non-empty subset of $\mathbb{N}$ has a least element."  Is this question just asking for the Well-Ordering principle?  Do we have to account for increasing the set from $\mathbb{N}$ to $\mathbb{Z}$?
-\end{enumerate} % end numbers
 
+\newpage %Q2
+\item
+\begin{enumerate}
+\item Prove Injectivity Finiteness Criterion:  Let $Y$ be finite and $f : X \to Y$ be injective, then $X$ is finite
+\\
+\item Injection Size Inequalities
+\begin{enumerate}
+\item Prove: Let $X$ be finite and $A \subseteq X$ then $|A| \leq |X|.$
+\item Prove: Let $Y$ be finite and $f:X \to Y$ be injective then $|X| \leq |Y|$.
+\item Prove: Let $X$ be finite, $A \subseteq X$ and $|A| = |X|$ then $A = X$.
+\end{enumerate}
+\item Prove First Bijectivity Criterion:  Let $Y$ be finite, $f:X \to Y$ be injective, and $|X| = |Y|$ then $F$ is bijective
+\end{enumerate}
+
+
+\newpage % Q3
+\item From Problem Set 1 we have that for any set $X$, $|X \times \underline{0}| = 0 = |\underline{0} \times X|$
+\begin{enumerate}
+\item Prove that for $m \in \mathbb{N}$ and $n \in \mathbb{N}_+$, $|\underline{m} \times  \underline{n}| = mn$.  Hint:  For $i \in \underline{n}$ let $X_i = \underline{m} \times \{i\}$.
+\item Prove that for $X$ and $Y$ finite sets $X \times Y$ is finite and $|X \times Y| = |X||Y|$
+\end{enumerate}
+
+\newpage % Q4
+\item Prove that if $X$ is finite and non-empty then $\mathcal{P}(X)$ is finite and $|\mathcal{P}(X)| = 2^{|X|}$.  The case $X = \phi$ comes from the the arithmetic convention that $2^0 = 1$
+
+\newpage % Q5
+\item
+\begin{enumerate}
+\item Let $X = U \cup V$ and define $\rho : F(X,Y) \to F(U,Y) \times F(V,Y)$ by $\rho(f) = (f_U,f_V)$.  If $U \cap V = \phi$ give the definition of $\rho^{-1} : F(U,Y) \times F(V,Y) \to F(X,Y)$. 
+\item Given a singleton $\{x\}$, and any non-empty set $Y$ we have a bijection $\epsilon : Y \to F(\{x\}, Y), \epsilon(x)(z) = y$.  Use this and the preceding part to give an inductive proof that for $X, Y$ finite and non-empty $F(X,Y)$ is finite and $|F(X,Y)| = |Y||X|$.
+\end{enumerate}
+
+\end{enumerate} % end numbers
 \end{document}
