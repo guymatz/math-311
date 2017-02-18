@@ -18,15 +18,19 @@
 \newpage %Q2
 \item
 \begin{enumerate}
-\item Prove Injectivity Finiteness Criterion:  Let $Y$ be finite and $f : X \to Y$ be injective, then $X$ is finite
-\\
+\item Prove Injectivity Finiteness Criterion:  Let $Y$ be finite and $f : X \to Y$ be injective, then $X$ is finite\\\\
+Let $Y$ be finite and $f:X \to Y$ be injective.  Then $f:X \to f(X)$ is bijective.  We have $f_*(X) \subseteq Y$, so by Theorem 20, $f_*(X)$ is finite, hence $X$ is finite.
 \item Injection Size Inequalities
 \begin{enumerate}
-\item Prove: Let $X$ be finite and $A \subseteq X$ then $|A| \leq |X|.$
-\item Prove: Let $Y$ be finite and $f:X \to Y$ be injective then $|X| \leq |Y|$.
-\item Prove: Let $X$ be finite, $A \subseteq X$ and $|A| = |X|$ then $A = X$.
+\item Prove: Let $X$ be finite and $A \subseteq X$ then $|A| \leq |X|.$\\\\
+By Therem 20 we have $A$ and $X-A$ are finite.  By Theorem 16 $|X| = |A| + |X-A|$ hence $|A| \leq |X|$\\
+\item Prove: Let $Y$ be finite and $f:X \to Y$ be injective then $|X| \leq |Y|$.\\\\
+We have $f(X) \subseteq Y$ so $|f(X)| \leq Y$ but $f:X \to f(X)$ is bijective so $|X| = |f(X)| \leq |Y|$\\
+\item Prove: Let $X$ be finite, $A \subseteq X$ and $|A| = |X|$ then $A = X$.\\\\
+Assume $|X|$ is finite, $A \subseteq X$ and $|X| = |A|$.  We have $|X| = |A| + |X-A|$.  But $|X| = |A|$ hence $|X-A| = 0$ so $X-A = \phi$
 \end{enumerate}
-\item Prove First Bijectivity Criterion:  Let $Y$ be finite, $f:X \to Y$ be injective, and $|X| = |Y|$ then $F$ is bijective
+\item Prove First Bijectivity Criterion:  Let $Y$ be finite, $f:X \to Y$ be injective, and $|X| = |Y|$ then $F$ is bijective\\\\
+We have $f: X \to Y$ is injective.  Hence $f:X \to f(X)$ is bijective so $|f(X)| = |X| = |Y|$.  Therefore $f(X) = Y$, that is $f$ is surjective.
 \end{enumerate}
 
 
@@ -38,13 +42,20 @@
 \end{enumerate}
 
 \newpage % Q4
-\item Prove that if $X$ is finite and non-empty then $\mathcal{P}(X)$ is finite and $|\mathcal{P}(X)| = 2^{|X|}$.  The case $X = \phi$ comes from the the arithmetic convention that $2^0 = 1$
-
+\item Prove that if $X$ is finite and non-empty then $\mathcal{P}(X)$ is finite and $|\mathcal{P}(X)| = 2^{|X|}$.  The case $X = \phi$ comes from the arithmetic convention that $2^0 = 1$\\\\
+We do induction on the size of $X$.\\
+$\mathbf{Base Case:}$ If $|X| = 1$ take $x$ to be the single element of $X$.  Then $\mathcal{P}(X) = \{\phi, \{x\}\}$ and $|\mathcal{P}(X)| = 2 = 2^{|X|}$.\\
+$\mathbf{Inductive Proposition:}$  If $|X| = n$ implies $|\mathcal{P}(X)| = 2^{|X|}$ then for $Y = n + 1$ we have $|\mathcal{P}(Y)| = 2^{n+1}$.\\
+$\mathbf{Proof:}$ Assume that for $0 < n = |X|$ we have $|\mathcal{P}(X)| = 2^{n}$.  Let $|Y| = n + 1$ and take $y \in Y$.  Let $A = \mathcal{P}(Y - \{y\}), B = \{V \in \mathcal{P}(Y) : y \in V\}$.  We have $|Y| = |Y - \{y\}| +1$ so $|Y - \{y\}| = n$.  By our inductive assumption $A = \mathcal{P}(Y - \{y\})$ is finite and $|A| = 2^n$.  We have $\alpha : A \to B$ is bijective so $|B| = |A|$.  We have $\mathcal{P}(Y) = A \cup B$ and $A \cap B= \phi$ so $\mathcal{P}(Y) = |A| + |B| = 2|A| = 2^{n+1}$.
 \newpage % Q5
 \item
 \begin{enumerate}
-\item Let $X = U \cup V$ and define $\rho : F(X,Y) \to F(U,Y) \times F(V,Y)$ by $\rho(f) = (f_U,f_V)$.  If $U \cap V = \phi$ give the definition of $\rho^{-1} : F(U,Y) \times F(V,Y) \to F(X,Y)$. 
-\item Given a singleton $\{x\}$, and any non-empty set $Y$ we have a bijection $\epsilon : Y \to F(\{x\}, Y), \epsilon(x)(z) = y$.  Use this and the preceding part to give an inductive proof that for $X, Y$ finite and non-empty $F(X,Y)$ is finite and $|F(X,Y)| = |Y||X|$.
+\item Let $X = U \cup V$ and define $\rho : F(X,Y) \to F(U,Y) \times F(V,Y)$ by $\rho(f) = (f_U,f_V)$.  If $U \cap V = \phi$ give the definition of $\rho^{-1} : F(U,Y) \times F(V,Y) \to F(X,Y)$.\\\\
+$\mathbf{Definition}:$ Let $(g,h) \in F(U,Y) \times F(V,Y)$.  We define $\rho^{-1}(g,h)(z) = g(z)$ when $z \in U$ and $\rho^{-1}(g,h)(z) = h(z)$ when $z \in V$.  Notice that the conditions $U \cup V = X$ and $U \cap V = \phi$ are necessary to ensure that $\rho^{-1}(g,h) \in F(X,Y)$
+\item Given a singleton $\{x\}$, and any non-empty set $Y$ we have a bijection $\epsilon : Y \to F(\{x\}, Y), \epsilon(x)(z) = y$.  Use this and the preceding part to give an inductive proof that for $X, Y$ finite and non-empty $F(X,Y)$ is finite and $|F(X,Y)| = |Y|^{|X|}$.\\\\
+$\mathbf{Base Case:}$ For $Y$ finite and non-empty $|X| = 1$ and so $X = \{x\}$.  We have the bijection $\epsilon : Y \to F(X,Y)$ so $|F(X,Y)| = |Y| = |Y|^{|X|}$\\
+$\mathbf{Inductive Proposition:}$ If for $1 \leq |Z| = n$ and $Y$ finite and non-empty we have $F(Z,Y)$ is finite and $|F(Z,Y)| = |Y|^{|Z|}$ then for $|X| = n+1$ we have $F(X,Y) = |Y|^{n+1}$ \\
+$\mathbf{Proof:}$ Assume $1 \leq |Z| = n$ and $Y$ finite and non-empty we have $F(Z,Y)$ is finite and $|F(Z,Y)| = |Y|^{|Z|}$.  Let $Y$ be finite, $1 \leq n$ and $|X| = n+1$.  Choose an $x \in X$ and let $Z = X - \{x\}$.  By part (a) we have a bijection $\rho : F(X,Y) \to F(Z,Y) \times F(\{x\},Y)$.  We have the bijection $\epsilon : F(\{x\},Y) \to Y$.  Thus we have the bijection $B = (Id_{F(Z,Y)} \times \epsilon) \circ \rho :F(Z,Y) \times Y$.  By our inductive assumption we have $|F(Z,Y)| = |Y|^n$.  By Problem 3 we have $|F(Z,Y) \times Y| = |Y|^n \times |Y| = Y^{n+1}$, therefore the bijection $B$ gives $|Y|^{n+1} = |F(X,Y)| = |Y|^{|X|}$.
 \end{enumerate}
 
 \end{enumerate} % end numbers
