@@ -44,6 +44,22 @@ Suppose $|Y| \geq 1.$  Let $f : X \to Y$ be defined by $f(x) = y_1$.  If $|Y| \g
 \end{enumerate} % end letters
 \newpage
 
+\item Let $f : X \to Y, B_0, B_1 \subseteq Y$
+\begin{enumerate}
+\item Show that $f^*(B_0 \cup B_1) = f^*(B_0) \cup f^*(B_1)$
+\\
+$\Rightarrow:$  We want to show that $f^*(B_0 \cup B_1) \subseteq f^*(B_0) \cup f^*(B_1)$.\\
+Let $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  By definition, $f^{-1}(b) \in f^*(B_0) \subseteq f^*(B_0) \cup f^*(B_1)$. 
+\\
+$\Leftarrow:$ We want to show that $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$.\\
+Let $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  By definition, $f^{-1}(y) \in f^*(B_0) \subseteq f^*(B_0) \cup f^*(B_1)$. 
+\\
+Now suppose $y \in f^*(B_0) \cup f^*(B_1)$, wlog $y \in f^*(B_0)$.  By definition, $y \in f^*(B_0 \cup B_1)$.  We can conclude $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$
+\item Show that $f^*(B_0 \cap B_1) = f^*(B_0) \cap f^*(B_1)$
+\\
+\item Let $B \subseteq Y$, show that $f^*(\bar{B}) = \overline{f^*(B)}$
+\end{enumerate}
+\newpage
 \item % problem 3
 \begin{enumerate}
 \item Let $A_0 , A_1 \subseteq X$. Show that $f_*(A_0 \cup A_1 ) = f_*(A_0) \cup f_*(A_1)$
