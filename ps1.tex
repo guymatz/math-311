@@ -46,18 +46,33 @@ Suppose $|Y| \geq 1.$  Let $f : X \to Y$ be defined by $f(x) = y_1$.  If $|Y| \g
 
 \item Let $f : X \to Y, B_0, B_1 \subseteq Y$
 \begin{enumerate}
+% a
 \item Show that $f^*(B_0 \cup B_1) = f^*(B_0) \cup f^*(B_1)$
 \\
 $\Rightarrow:$  We want to show that $f^*(B_0 \cup B_1) \subseteq f^*(B_0) \cup f^*(B_1)$.\\
-Let $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  By definition, $f^{-1}(b) \in f^*(B_0) \subseteq f^*(B_0) \cup f^*(B_1)$. 
-\\
-$\Leftarrow:$ We want to show that $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$.\\
 Let $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  By definition, $f^{-1}(y) \in f^*(B_0) \subseteq f^*(B_0) \cup f^*(B_1)$. 
 \\
-Now suppose $y \in f^*(B_0) \cup f^*(B_1)$, wlog $y \in f^*(B_0)$.  By definition, $y \in f^*(B_0 \cup B_1)$.  We can conclude $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$
+$\Leftarrow:$ We want to show that $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$.
+\\
+Now suppose $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  $f^{-1}(y) \in f^*(B_0 \cup B_1)$.  We can conclude $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$
+% b
 \item Show that $f^*(B_0 \cap B_1) = f^*(B_0) \cap f^*(B_1)$
 \\
-\item Let $B \subseteq Y$, show that $f^*(\bar{B}) = \overline{f^*(B)}$
+$\Rightarrow:$  We want to show that $f^*(B_0 \cap B_1) \subseteq f^*(B_0) \cap f^*(B_1)$.\\
+Let $y \in (B_0 \cap B_1)$.  By definition, $f^{-1}(y) \in f^*(B_0 \cap B_1) \subseteq f^*(B_0) \cap f^*(B_1)$. 
+\\
+$\Leftarrow:$ We want to show that $f^*(B_0) \cap f^*(B_1) \subseteq f^*(B_0 \cap B_1)$.
+\\
+Now suppose $y \in (B_0 \cap B_1)$.  $f^{-1}(y) \in f^*(B_0 \cap B_1)$.  We can conclude $f^*(B_0) \cap f^*(B_1) \subseteq f^*(B_0 \cap B_1)$  FIX ME!!
+% c
+\item Let $B \subseteq Y$, show that $f^*(\bar{B}) = \overline{f^*(B)}$\\
+$\Rightarrow:$  We want to show that $f^*(\bar{B}) \subseteq \overline{f^*(B)}$.\\
+Let $y \in B$.  By definition, $f^{-1}(y) \in f^*(B) \subseteq f^*(Y)$.  Hence, for $y \notin B, f^{-1}(y) \in f^*(\bar{B}) \subseteq \overline{f^*(B)}$
+\\
+$\Leftarrow:$ We want to show that $\overline{f^*(B)} \subseteq f^*(\bar{B})$.
+\\
+Again suppose $y \in B$.  By definition, $f^{-1}(y) \in f^*(B) \subseteq f^*(Y)$.  Hence, for $y \notin B, f^{-1}(y) \in f^*(\bar{B}) \subseteq \overline{f^*(B)}$  FIX ME!
+
 \end{enumerate}
 \newpage
 \item % problem 3
@@ -137,7 +152,7 @@ $f^*(1,2) = f^*(3) = 3$
 \newpage
 
 % Q5
-\item Let $f:X \to Y$ and $X \neq \phi$
+\item Let $f:X \to Y$ and $X \neq \phi$  FIX THESE!!
 \begin{enumerate}
 \item Show that $f$ is injective if and only if $f$ has a left inverse\\
 $\Leftarrow$Assume $f$ has a left inverse.\\
