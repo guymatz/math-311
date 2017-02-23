@@ -55,6 +55,7 @@ Let $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  By definition, $f^{-1}(y) \in f^*
 $\Leftarrow:$ We want to show that $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$.
 \\
 Now suppose $y \in (B_0 \cup B_1)$, wlog $y \in B_0$.  $f^{-1}(y) \in f^*(B_0 \cup B_1)$.  We can conclude $f^*(B_0) \cup f^*(B_1) \subseteq f^*(B_0 \cup B_1)$
+\\
 % b
 \item Show that $f^*(B_0 \cap B_1) = f^*(B_0) \cap f^*(B_1)$
 \\
@@ -63,7 +64,8 @@ Let $y \in (B_0 \cap B_1)$.  By definition, $f^{-1}(y) \in f^*(B_0 \cap B_1) \su
 \\
 $\Leftarrow:$ We want to show that $f^*(B_0) \cap f^*(B_1) \subseteq f^*(B_0 \cap B_1)$.
 \\
-Now suppose $x \in f^*(B_0) \cap f^*(B_1)$.  I.e. $\exists$ FIX!!!
+Now suppose $x \in f^*(B_0) \cap f^*(B_1)$.  I.e. there is a $y_0 \in A_0 \cap A_1$ such that $f(x) = y_0)$ and $y_1 \in A_0 \cap A_1$ such that $f(x) = y_1)$.  Since $f$ is well-defined, it must be that $y_0 = y_1$, hence $y_0 \in A_0 \cap A_1$, and we can conclude that $x \in f^*(A_0 \cap A_1)$
+\\
 % c
 \item Let $B \subseteq Y$, show that $f^*(\bar{B}) = \overline{f^*(B)}$\\
 $\Rightarrow:$  We want to show that $f^*(\bar{B}) \subseteq \overline{f^*(B)}$.\\
@@ -71,7 +73,7 @@ Let $y \in B$.  By definition, $f^{-1}(y) \in f^*(B) \subseteq f^*(Y)$.  Hence, 
 \\
 $\Leftarrow:$ We want to show that $\overline{f^*(B)} \subseteq f^*(\bar{B})$.
 \\
-Again suppose $y \in B$.  By definition, $f^{-1}(y) \in f^*(B) \subseteq f^*(Y)$.  Hence, for $y \notin B, f^{-1}(y) \in f^*(\bar{B}) \subseteq \overline{f^*(B)}$  FIX ME!
+Now suppose $x \in \overline{f^*(B)}$. For $y \in B, f(x) \neq y$.  Since $f$ is a well-defined function, there exists $y_0 \in Y$ such that $f(x) = y_0$.  However, $y_0$ cannot be an element of B, so $y_0 \in \bar{B}$, and $x \in f^*(\bar{B})$.
 
 \end{enumerate}
  % end problem 3
@@ -102,7 +104,7 @@ f_*(A_0) \cap f_*(A_1) &= \{1,2\}
 \end{align*}
 Therefore $f_*(A_0 \cap A_1) \neq f_*(A_0) \cap f_*(A_1)$
 \\
-% 3c
+% 4c
 \item Show that if $f:X \to Y$ is not surjective then for any subset $\phi \neq A, \overline{f_*(A)} \neq f_*(\overline{A})$.\\
 \\
 Since $f$ is not surjective, there is a $y_0 \in Y$ such that $y_0 \notin f_*(X)$.  Let $\bar{A} \subseteq X$ be non-empty.  Since $y_0 \notin f_*(X), y_0 \notin f_*(\bar{A})$, which means that it must be in $\overline{f_*(A)}$, and, therefore, $f_*(\bar{A}) \neq \overline{f_*(A)}$
@@ -153,13 +155,13 @@ $f^*(1,2) = f^*(3) = 3$
 \newpage
 
 % Q5
-\item Let $f:X \to Y$ and $X \neq \phi$  FIX THESE!!
+\item Let $f:X \to Y$ and $X \neq \phi$
 \begin{enumerate}
 \item Show that $f$ is injective if and only if $f$ has a left inverse\\
 $\Leftarrow$Assume $f$ has a left inverse.\\
 Let $g : Y \to X$ such that $g \circ f = Id_X$ be the left inverse of $f$.  We want to show that $f$ in injective.  Let $x_1, x_2 \in X$.  Then $f(x_1) = f(x_2)$, and $(g(f(x_1)) = g(f(x_2))$, so $x_1 = x_2$ which shows injectivity.\\\\
 $\Rightarrow$Assume $f$ is injective\\
-Let $x_0 \in X$ .  We want to show that $\forall y \in f^*(X), \exists! x:f(x) = y.$  $x$ exists since $f$ is injective, and $y \in f^*(X)$.  Now define $g_l : Y \to X$ as $g_l(y) = x_0$ if $y \notin f^*(X)$, otherwise, $g_l(y) = x$.  Since $f(x) \in f^*(X)$ we have $g_l(f(x)) = x$, and thus $(g_l \circ f)(x) = Id_X(x)$
+Let $x \in X$ .  We want to show that $\forall y \in f^*(X), \exists! x:f(x) = y.$  $x$ exists since $y \in f^*(X)$ and is unique since $f$ is injective.  Now define $g_l : Y \to X$ as $g_l(y) = x_0$ if $y \notin f^*(X)$, otherwise, $g_l(y) = x$.  Since $f(x) \in f^*(X)$ we have $g_l(f(x)) = x$, and thus $(g_l \circ f)(x) = Id_X(x)$
 \item Show that if $f$ has a right inverse, then $f$ is surjective\\\\
 Let $f$ have a right inverse $g : Y \to X$ such that  $f \circ g = Id_Y$.  We want to show that $f$ is surjective, i.e. $\forall y \in Y, \exists x \in X$ such that $f(x) = y$.  Let $y$ be an arbitrary element of $Y$.  Since $f$ has a right inverse, $g_r$, for any $x$,
 $$f(x) = f(g_r(y)) = f \circ g_r(y) = Id_Y = y$$
@@ -259,9 +261,11 @@ $$Fix(f) = \{x\in X; f(x) = x\}$$
 $$Co(X) = \{f : Fix(f)\ is\ cofinite\}$$
 \\
 We want to show that if $f,g \in Co(X)$, then $f \circ g \in Co(X)$\\
-Fix($f$), Fix($g$) are cofinite.  By Problem 10, Fix($f$) $\cap$ Fix($g$) is cofinite . . ?
+Fix($f$), Fix($g$) are cofinite.  By Problem 11, Fix($f$) $\cap$ Fix($g$) is cofinite . . ?
 \\
-\item Show that if $f \in S_X$ is cofinite, so is $f^{-1}$.
+\item Show that if $f \in S_X$ is cofinite, so is $f^{-1}$.\\
+\\
+Let $x \in Fix(f)$, then, by definition $x \in Fix(f^{-1})$ and thus $Fix(f) \subseteq Fix(f^{-1})$.  A cofinite subset implies a cofinite superset, so $f^{-1}$ is cofinite.
 \end{enumerate}
 % end Q11
 
