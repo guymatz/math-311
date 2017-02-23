@@ -63,7 +63,7 @@ Let $y \in (B_0 \cap B_1)$.  By definition, $f^{-1}(y) \in f^*(B_0 \cap B_1) \su
 \\
 $\Leftarrow:$ We want to show that $f^*(B_0) \cap f^*(B_1) \subseteq f^*(B_0 \cap B_1)$.
 \\
-Now suppose $y \in (B_0 \cap B_1)$.  $f^{-1}(y) \in f^*(B_0 \cap B_1)$.  We can conclude $f^*(B_0) \cap f^*(B_1) \subseteq f^*(B_0 \cap B_1)$  FIX ME!!
+Now suppose $x \in f^*(B_0) \cap f^*(B_1)$.  I.e. $\exists$ FIX!!!
 % c
 \item Let $B \subseteq Y$, show that $f^*(\bar{B}) = \overline{f^*(B)}$\\
 $\Rightarrow:$  We want to show that $f^*(\bar{B}) \subseteq \overline{f^*(B)}$.\\
@@ -74,8 +74,9 @@ $\Leftarrow:$ We want to show that $\overline{f^*(B)} \subseteq f^*(\bar{B})$.
 Again suppose $y \in B$.  By definition, $f^{-1}(y) \in f^*(B) \subseteq f^*(Y)$.  Hence, for $y \notin B, f^{-1}(y) \in f^*(\bar{B}) \subseteq \overline{f^*(B)}$  FIX ME!
 
 \end{enumerate}
+ % end problem 3
 \newpage
-\item % problem 3
+\item % problem 4
 \begin{enumerate}
 \item Let $A_0 , A_1 \subseteq X$. Show that $f_*(A_0 \cup A_1 ) = f_*(A_0) \cup f_*(A_1)$
 \\ \\
@@ -291,10 +292,32 @@ Then $f = \omega \circ \omega \circ h \circ \omega^{-1} \circ \omega^{-1} = (\om
 \end{enumerate}
 % end Q13
 
+
 \newpage
 % Q14
+\item All of the parts of this problem have one-line answers
+\begin{enumerate}
+\item Show that $O(X)$ is conjugate-invariant\\
+The results of 9a, above, show that $O(X)$ is conjugate-invariant
+\\
+\item Show that $T(X)$ is conjugate-invariant\\
+The results of 9b, above, show that $T(X)$ is conjugate-invariant
+\\
+\item Show that $S(X)$ is conjugate-invariant\\
+The results of 9c, above, show that $S(X)$ is conjugate-invariant
+\\
+\item Show that $Co(X)$ is conjugate-invariant\\
+The results of 11a, above, show that $Co(X)$ is conjugate-invariant
+\\
+\item Show that $Co(X) \cap S_X$ is conjugate-invariant\\
+The results of 11b, above, show that $Co(X) \cap S_X$ is conjugate-invariant
+\\
+\end{enumerate}
+% end Q 14
+
+\newpage
+% Q15
 \item Let $X$ be a set and define a relation $\sim$ on $\mathcal{P}(X)$ by $A \sim B$ if there exists a bijection $f:A \leftrightarrow B$.  Prove that $\sim$ is an equivalence relation.
-% end Q14
 \\\\
 To be an equivalance relation, the relation $\sim$ must satisfy the following properties:
 \begin{enumerate}
@@ -309,6 +332,7 @@ Let $f = Id_X$, then $f(A) = A$\\
 Let $f:A \leftrightarrow B$ and $g:B \leftrightarrow C$
 \\
 Since $f_*(A) = B$ and $g_*(B) = C$, and both $f$ and $g$ are bijective, we have $(g \circ f)(A) = C$
+% end Q 15
 \end{enumerate}
 \end{enumerate} % end numbers
 \end{document}
