@@ -11,51 +11,68 @@
 %\newpage % Q1
 
 \begin{enumerate}  % begin numbers
-\item Prove that if $X \subseteq \mathbb{Z}$ is finite and non-empty, then $X$ has a least element.\\
+\item Fill out the values for md and qt in the following table.\\
 \\
-"The Well Ordering Axiom ... asserts that every non-empty subset of $\mathbb{N}$ has a least element."  Is this question just asking for the Well-Ordering principle?  Do we have to account for increasing the set from $\mathbb{N}$ to $\mathbb{Z}$?
+\begin{center}
+  \begin{tabular}{ c | c | c }
+    $(m,n)$ & $md(m,n)$ & $qt(m,n)$ \\ \hline
+    (987654321, 7531) &  &  \\ \hline
+    (987654321, -7531) &  &  \\ \hline
+    (-987654321, 7531) &  &  \\ \hline
+    (987654321, 7531) & & \\ \hline
+  \end{tabular}
+\end{center}
 
 \newpage %Q2
-\item
-\begin{enumerate}
-\item Prove Injectivity Finiteness Criterion:  Let $Y$ be finite and $f : X \to Y$ be injective, then $X$ is finite\\\\
-Let $Y$ be finite and $f:X \to Y$ be injective.  Then $f:X \to f(X)$ is bijective.  We have $f_*(X) \subseteq Y$, so by Theorem 20, $f_*(X)$ is finite, hence $X$ is finite.
-\item Injection Size Inequalities
-\begin{enumerate}
-\item Prove: Let $X$ be finite and $A \subseteq X$ then $|A| \leq |X|.$\\\\
-By Therem 20 we have $A$ and $X-A$ are finite.  By Theorem 16 $|X| = |A| + |X-A|$ hence $|A| \leq |X|$\\
-\item Prove: Let $Y$ be finite and $f:X \to Y$ be injective then $|X| \leq |Y|$.\\\\
-We have $f(X) \subseteq Y$ so $|f(X)| \leq Y$ but $f:X \to f(X)$ is bijective so $|X| = |f(X)| \leq |Y|$\\
-\item Prove: Let $X$ be finite, $A \subseteq X$ and $|A| = |X|$ then $A = X$.\\\\
-Assume $|X|$ is finite, $A \subseteq X$ and $|X| = |A|$.  We have $|X| = |A| + |X-A|$.  But $|X| = |A|$ hence $|X-A| = 0$ so $X-A = \phi$
-\end{enumerate}
-\item Prove First Bijectivity Criterion:  Let $Y$ be finite, $f:X \to Y$ be injective, and $|X| = |Y|$ then $F$ is bijective\\\\
-We have $f: X \to Y$ is injective.  Hence $f:X \to f(X)$ is bijective so $|f(X)| = |X| = |Y|$.  Therefore $f(X) = Y$, that is $f$ is surjective.
-\end{enumerate}
+\item Give an example of a set, S$S$, such that $S$ is realitively prime, but such that for all $s_i, s_j \in S$, gcd($s_i, s_j) \neq 1$
 
 
 \newpage % Q3
-\item From Problem Set 1 we have that for any set $X$, $|X \times \underline{0}| = 0 = |\underline{0} \times X|$
+\item Generalizing BB Proposition 1.2.3, which states: \\
+Let $a, b$ be integers, where $a \neq 0$ or $b \neq 0$
 \begin{enumerate}
-\item Prove that for $m \in \mathbb{N}$ and $n \in \mathbb{N}_+$, $|\underline{m} \times  \underline{n}| = mn$.  Hint:  For $i \in \underline{n}$ let $X_i = \underline{m} \times \{i\}$.
-\item Prove that for $X$ and $Y$ finite sets $X \times Y$ is finite and $|X \times Y| = |X||Y|$
+\item If $b | ac$, then $b | (a,b) \cdot c$
+\item If $b | ac$, and $(a, b) = 1$, then $b|c$
+\item If $b | a$, $c | a$ and $(b, c) = 1$, then $bc|a$
+\item $(a, bc) =1 $ if and only if $(a,b) = 1$ and $(a,c) = 1$
+\end{enumerate}
+
+\begin{enumerate}
+\item Generalizing BB Proposition 1.2.3.d, Show that if $(a,b_1)=(a,b_2)=... (a,b_n)=1$ then $(a,b_1 b_2 ... b_n) = 1$\\
+\\
+\item Show that if $(a, b) = 1$ then $(a^n, b^n) = 1$\\
+\\
+\item Show that if $(a, b_1 b_2...b_n) = 1$ then $(a, b_1) = (a, b_2) = ... (a,b_n) = 1$\\
+\\
+\item Generalizing BB Proposition 1.2.3.c, prove that if $a_1 | c$, $a_2| c$...$a_n|c$ and $(a_i, a_j) = 1$ for $i \neq j$ then $(a_1 a_2...a_n)|c$
+
 \end{enumerate}
 
 \newpage % Q4
-\item Prove that if $X$ is finite and non-empty then $\mathcal{P}(X)$ is finite and $|\mathcal{P}(X)| = 2^{|X|}$.  The case $X = \phi$ comes from the arithmetic convention that $2^0 = 1$\\\\
-We do induction on the size of $X$.\\
-$\mathbf{Base Case:}$ If $|X| = 1$ take $x$ to be the single element of $X$.  Then $\mathcal{P}(X) = \{\phi, \{x\}\}$ and $|\mathcal{P}(X)| = 2 = 2^{|X|}$.\\
-$\mathbf{Inductive Proposition:}$  If $|X| = n$ implies $|\mathcal{P}(X)| = 2^{|X|}$ then for $Y = n + 1$ we have $|\mathcal{P}(Y)| = 2^{n+1}$.\\
-$\mathbf{Proof:}$ Assume that for $0 < n = |X|$ we have $|\mathcal{P}(X)| = 2^{n}$.  Let $|Y| = n + 1$ and take $y \in Y$.  Let $A = \mathcal{P}(Y - \{y\}), B = \{V \in \mathcal{P}(Y) : y \in V\}$.  We have $|Y| = |Y - \{y\}| +1$ so $|Y - \{y\}| = n$.  By our inductive assumption $A = \mathcal{P}(Y - \{y\})$ is finite and $|A| = 2^n$.  We have $\alpha : A \to B$ is bijective so $|B| = |A|$.  We have $\mathcal{P}(Y) = A \cup B$ and $A \cap B= \phi$ so $\mathcal{P}(Y) = |A| + |B| = 2|A| = 2^{n+1}$.
+\item Prove the General Euclid Lemma: Let $p$ be prime and $S$ be a finite set of integers.  If $p|\Pi_{n \in S}n$ then there exists an $n \in S$ such that $p | n$
+\\
+\\
+
+
 \newpage % Q5
-\item
+\item Prove the following:
 \begin{enumerate}
-\item Let $X = U \cup V$ and define $\rho : F(X,Y) \to F(U,Y) \times F(V,Y)$ by $\rho(f) = (f_U,f_V)$.  If $U \cap V = \phi$ give the definition of $\rho^{-1} : F(U,Y) \times F(V,Y) \to F(X,Y)$.\\\\
-$\mathbf{Definition}:$ Let $(g,h) \in F(U,Y) \times F(V,Y)$.  We define $\rho^{-1}(g,h)(z) = g(z)$ when $z \in U$ and $\rho^{-1}(g,h)(z) = h(z)$ when $z \in V$.  Notice that the conditions $U \cup V = X$ and $U \cap V = \phi$ are necessary to ensure that $\rho^{-1}(g,h) \in F(X,Y)$
-\item Given a singleton $\{x\}$, and any non-empty set $Y$ we have a bijection $\epsilon : Y \to F(\{x\}, Y), \epsilon(x)(z) = y$.  Use this and the preceding part to give an inductive proof that for $X, Y$ finite and non-empty $F(X,Y)$ is finite and $|F(X,Y)| = |Y|^{|X|}$.\\\\
-$\mathbf{Base Case:}$ For $Y$ finite and non-empty $|X| = 1$ and so $X = \{x\}$.  We have the bijection $\epsilon : Y \to F(X,Y)$ so $|F(X,Y)| = |Y| = |Y|^{|X|}$\\
-$\mathbf{Inductive Proposition:}$ If for $1 \leq |Z| = n$ and $Y$ finite and non-empty we have $F(Z,Y)$ is finite and $|F(Z,Y)| = |Y|^{|Z|}$ then for $|X| = n+1$ we have $F(X,Y) = |Y|^{n+1}$ \\
-$\mathbf{Proof:}$ Assume $1 \leq |Z| = n$ and $Y$ finite and non-empty we have $F(Z,Y)$ is finite and $|F(Z,Y)| = |Y|^{|Z|}$.  Let $Y$ be finite, $1 \leq n$ and $|X| = n+1$.  Choose an $x \in X$ and let $Z = X - \{x\}$.  By part (a) we have a bijection $\rho : F(X,Y) \to F(Z,Y) \times F(\{x\},Y)$.  We have the bijection $\epsilon : F(\{x\},Y) \to Y$.  Thus we have the bijection $B = (Id_{F(Z,Y)} \times \epsilon) \circ \rho :F(Z,Y) \times Y$.  By our inductive assumption we have $|F(Z,Y)| = |Y|^n$.  By Problem 3 we have $|F(Z,Y) \times Y| = |Y|^n \times |Y| = Y^{n+1}$, therefore the bijection $B$ gives $|Y|^{n+1} = |F(X,Y)| = |Y|^{|X|}$.
+\item Let $n \in \mathbb{Z}$ and $2 \leq \mathbb{N}$.  We have $e = e(n,b)$ if and only if $n = b^em$ with $b \nmid m$\\
+\\
+\item Let $n \in \mathbb{Z}$ and $p$ be prime, then $e = e(n,b)$ if and only if $n = p^em$ with gcd$(p,m) = 1$
+\end{enumerate}
+
+
+\newpage % Q6
+\item 
+\begin{enumerate}
+\item Let $m,n \in \mathbb{Z}^*$ and $d = $ gcd($m,n)$.  Show that gcd($m/d , n/d) = 1$
+\\
+\item Suppose that gcd($r,s$) = 1 and gcd($a,b$) = 1 and that $ra = sb$.  Show that $r=b, s = a$ or $r = -b, s = -a$
+\\
+\item Let $(r,s) = 1$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and that $ra = sb$.  Show that $r = \tfrac{b}{d}, s = \tfrac{a}{d}$ or $r = -\tfrac{b}{d}, s=\tfrac{a}{d}$
+\\
+\item Let $r,s \in \mathbb{Z}_*$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and suppose that $ra = sb$.  Show that $\tfrac{r}{f} = \tfrac{b}{d}, \tfrac{s}{f} = \tfrac{a}{d}$ or $\tfrac{r}{f} = -\tfrac{b}{d}, \tfrac{s}{f}=\tfrac{a}{d}$
 \end{enumerate}
 
 \end{enumerate} % end numbers
