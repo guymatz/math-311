@@ -16,16 +16,16 @@
 \begin{center}
   \begin{tabular}{ c | c | c }
     $(m,n)$ & $md(m,n)$ & $qt(m,n)$ \\ \hline
-    (987654321, 7531) &  &  \\ \hline
-    (987654321, -7531) &  &  \\ \hline
-    (-987654321, 7531) &  &  \\ \hline
-    (987654321, 7531) & & \\ \hline
+    (987654321, 7531) & 1326 & 131145 \\ \hline
+    (987654321, -7531) & 1326 & -131145 \\ \hline
+    (-987654321, 7531) & 6205 & -131146 \\ \hline
+    (-987654321, -7531) & 6205 & 131146 \\ \hline
   \end{tabular}
 \end{center}
 
 \newpage %Q2
 \item Give an example of a set, S$S$, such that $S$ is realitively prime, but such that for all $s_i, s_j \in S$, gcd($s_i, s_j) \neq 1$
-
+$$\{6,10,15\}$$
 
 \newpage % Q3
 \item Generalizing BB Proposition 1.2.3, which states: \\
@@ -74,6 +74,30 @@ Let $a, b$ be integers, where $a \neq 0$ or $b \neq 0$
 \\
 \item Let $r,s \in \mathbb{Z}_*$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and suppose that $ra = sb$.  Show that $\tfrac{r}{f} = \tfrac{b}{d}, \tfrac{s}{f} = \tfrac{a}{d}$ or $\tfrac{r}{f} = -\tfrac{b}{d}, \tfrac{s}{f}=\tfrac{a}{d}$
 \end{enumerate}
+
+
+\newpage % Q7
+\item Let $a, b \in \mathbb{Z}^*$ and consider the subgroups $a\mathbb{Z}$ and $a\mathbb{Z}$.  Then $a\mathbb{Z} \cap b\mathbb{Z}$ is a set of common multiples of $a$ and $b$.
+\begin{enumerate}
+\item Show that $a\mathbb{Z} \cap b\mathbb{Z}$ is a non-trivial subgroup of $\mathbb{Z}$
+\\
+\item By BB Proposition we have a positive number $l$ such that $a\mathbb{Z} \cap b\mathbb{Z} = l\mathbb{Z}$.  Show that $l$ is the least common multiple of $m$ and $n$.  We will denote this least common multiple by lcm($a,b$) or [$a,b$].
+\\
+\item Let lcm($a,b) = r|a| = s|b|$.  Let $d$ = gcd($a,b$).  Show that $r = \tfrac{|b|}{d}$ and $s = \tfrac{|a|}{d}$.  That is, lcm$(a,b) = \tfrac{|ab|}{\mathtt{gcd}(a,b)}$
+\end{enumerate}
+
+
+\newpage % Q8
+\item Give the steps in the Euclidean algorithm to compute gcd(81665731241, 777695550).
+
+\begin{align*}
+81665731241 =& 105 * 777695550 + 7698491\\
+777695550 =& 101 * 7698491 + 147959\\
+7698491 =& 52 * 147959 + 4623\\
+147959 =& 32 * 4623 + 23\\
+4623 =& 201 * 23 + 0\\
+d =& 23\\
+\end{align*}
 
 \end{enumerate} % end numbers
 \end{document}
