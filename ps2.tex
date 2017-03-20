@@ -24,7 +24,7 @@
 \end{center}
 
 \newpage %Q2
-\item Give an example of a set, S$S$, such that $S$ is realitively prime, but such that for all $s_i, s_j \in S$, gcd($s_i, s_j) \neq 1$
+\item Give an example of a set, $S$, such that $S$ is realitively prime, but such that for all $s_i, s_j \in S$, gcd($s_i, s_j) \neq 1$
 $$\{6,10,15\}$$
 
 \newpage % Q3
@@ -98,6 +98,89 @@ Let $a, b$ be integers, where $a \neq 0$ or $b \neq 0$
 4623 =& 201 * 23 + 0\\
 d =& 23\\
 \end{align*}
+
+\newpage % Q9
+\item 
+\begin{enumerate}
+\item Let $r_0 = 8245, r_1 = 2584$.  Show the steps in the extended Euclidean algorithm to get
+\begin{equation*}
+\left(
+\begin{array}{ccc}
+s_k & t_k & r_k \\
+s_{k+1} & t_{k+1} & 0 \\
+\end{array} \right)
+\end{equation*}
+You should get
+\begin{equation*}
+\left(
+\begin{array}{ccc}
+21 & -67 & 17 \\
+-152 & 485 & 0 \\
+\end{array} \right)
+\end{equation*}
+\item Give the steps to find $(m_{8245}, n_{2584})$.  You Should get (21, -67)
+\item Give the steps to find $(n_{8245}, m_{2584})$.  You Should get (-131, 418)
+\end{enumerate}
+
+
+\newpage % Q10
+\item 
+\begin{enumerate}
+\item Let $r_0 = 79, r_1 = 33$.  Show the steps in the extended Euclidean algorithm to get
+\begin{equation*}
+\left(
+\begin{array}{ccc}
+s_k & t_k & r_k \\
+s_{k+1} & t_{k+1} & 0 \\
+\end{array} \right)
+\end{equation*}
+You should get
+\begin{equation*}
+\left(
+\begin{array}{ccc}
+-5 & 12 & 1 \\
+-33 & -79 & 0 \\
+\end{array} \right)
+\end{equation*}
+\item Give the steps to find $(m_{79}, n_{33})$.  You Should get (28, -67)
+\item Give the steps to find $(n_{8245}, m_{2584})$.  You Should get (-5, 12)
+\end{enumerate}
+
+\newpage % Q11
+\item We really are morally obliged to show that these properties are independent of each other. Ideally we would like our sets and relations to reflect common mathematical experiences.
+\begin{enumerate}
+\item Given an example of a set $S$ and a relation on $\mathcal{R}$ on $s$ which is reflexive and transitive but not symmetric: Hint: Divisibility or $\leq$ or $\subseteq$.
+\\
+\\
+\item Give and example of a set $S$ and a relation $\mathcal{R}$ which is reflexive and symmetric but not transitive. Hint $|a-b| < \delta$.
+\\
+\\
+\item Show that if $\mathcal{R}$ on $S$ is symmetric and transitive but not reflexive there must be an $a \in S$ such that for all $b \in S$, $a /\mathcal{R} b$ and $b  /\mathcal{R} a$. In terms of set theory this is $\{a\} \times S \cup S \times \{a\} \cap \mathcal{R} = \phi$. In this case we say that $a$ is isolated with respect to $\mathcal{R}$. Now give an example of a $S$ and a relation $\mathcal{R}$ on $S$ which is symmetric, transitive but not reflexive.
+\end{enumerate}
+
+\newpage % Q12
+\item Prove Theorem 44. Each proof should be one or two lines which are references to the results in our notes on finite sets and counting. You should refer to this document by NFC.
+\begin{enumerate}
+\item If $S$ is finite and $P$ be a partition of $S$ then $P$ is finite and for all $s \in S, [s]^P$ is finite and $|S| = \Sigma_A \in P|A|$.
+\\
+\item If $P$ is a finite partition of $S$ into finite sets then $S$ is finite and $|S| = \Sigma_{A \in P}|A|$.
+\end{enumerate}
+
+\newpage % Q13
+\item Prove Theorem 50: Let $S \subseteq \mathbb{Z}$ and define a relation $\sim_S$ on $\mathbb{Z}$ by $a \sim_S b$ if $a-b \in S$.  The relation $\sim_S$ is an equivalence relation on $\mathbb{Z}$ if and only if $S$ is a subgroup of $\mathbb{Z}$.
+
+\newpage % Q14
+\item Let $P$ be an additive partition of $\mathbb{Z}$. Show that $[0]^P$ is a subgroup of $P$.
+
+
+\newpage % Q15
+\item
+\begin{enumerate}
+\item Let $G$ be a subgroup of $\mathbb{Z}$. By Theorem 50, $\sim_G$ is an equivalence relation. Show that $[a]_{\sim_G} = \{a\}+G = ???$ . Notice that $\{a\} + G = \{a + g : g \in S\}$
+\\
+\item Show that if G is a subgroup of $\mathbb{Z}$ then $\mathbb{Z}\sim_G$ is additive and that $[a]\sim_G + [b]\sim_G = [a + b]\sim_G$.
+\end{enumerate}
+
 
 \end{enumerate} % end numbers
 \end{document}
