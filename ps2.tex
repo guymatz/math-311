@@ -149,13 +149,25 @@ You should get
 \newpage % Q11
 \item We really are morally obliged to show that these properties are independent of each other. Ideally we would like our sets and relations to reflect common mathematical experiences.
 \begin{enumerate}
-\item Given an example of a set $S$ and a relation on $\mathcal{R}$ on $s$ which is reflexive and transitive but not symmetric: Hint: Divisibility or $\leq$ or $\subseteq$.
+\item Give an example of a set $S$ and a relation on $\mathcal{R}$ on $s$ which is reflexive and transitive but not symmetric: Hint: Divisibility or $\leq$ or $\subseteq$.
 \\
 \\
-\item Give and example of a set $S$ and a relation $\mathcal{R}$ which is reflexive and symmetric but not transitive. Hint $|a-b| < \delta$.
+For integers $a, b$ we define $a \sim b$ if $a \leq b$\\
+\\Reflexivity: $a \sim a$, $a \leq a \checkmark$
+\\Symmetry: $a \sim b \implies b \sim a$, If $a \leq b$ then $b \leq a$. $X$ 
+\\Transitivity: $a \sim b \wedge b \sim c \implies a \sim c$, If $a \leq b$ and $b \leq c$, then $a \leq c \checkmark$
 \\
+\item Give an example of a set $S$ and a relation on $\mathcal{R}$ on $s$ which is reflexive and symmetric but not transitive: Hint: Divisibility or $\leq$ or $\subseteq$.\\
 \\
+For $a,b,c \in \mathbb{R}$ we define $a \sim b$ if $|a - b| \leq \delta$ for some arbitrarily small $\delta \in \mathbb{R}_+$.
+\\
+\\Reflexivity: $a \sim a$, $|a-a| = 0 \leq \delta \checkmark$
+\\Symmetry: $a \sim b \implies b \sim a$, $|a-b| = |b-a|$, so if $|a-b| \leq \delta$, then $|b-a| \leq \delta  \checkmark$
+\\Transitivity: $a \sim b \wedge b \sim c \implies a \sim c$, This fails since, e,g, with $a = 5, b = 4, c = 3, |a-b| = 1$, and $|b-c| = 1$, however $|a-c| = 2$
 \item Show that if $\mathcal{R}$ on $S$ is symmetric and transitive but not reflexive there must be an $a \in S$ such that for all $b \in S$, $a /\mathcal{R} b$ and $b  /\mathcal{R} a$. In terms of set theory this is $\{a\} \times S \cup S \times \{a\} \cap \mathcal{R} = \phi$. In this case we say that $a$ is isolated with respect to $\mathcal{R}$. Now give an example of a $S$ and a relation $\mathcal{R}$ on $S$ which is symmetric, transitive but not reflexive.
+\\
+\\
+Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \end{enumerate}
 
 \newpage % Q12
