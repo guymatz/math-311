@@ -1,7 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\title{\textbf{Math 311 - Problem Set 1}}
+\usepackage{graphicx}
+
+\title{\textbf{Math 311 - Problem Set 2}}
 \author{Guy Matz}
 \date{\today}
 \begin{document}
@@ -313,6 +315,13 @@ For $a,b,c \in \mathbb{R}$ we define $a \sim b$ if $|a - b| \leq \delta$ for som
 \item Show that if $\mathcal{R}$ on $S$ is symmetric and transitive but not reflexive there must be an $a \in S$ such that for all $b \in S$, $a /\mathcal{R} b$ and $b  /\mathcal{R} a$. In terms of set theory this is $\{a\} \times S \cup S \times \{a\} \cap \mathcal{R} = \phi$. In this case we say that $a$ is isolated with respect to $\mathcal{R}$. Now give an example of a $S$ and a relation $\mathcal{R}$ on $S$ which is symmetric, transitive but not reflexive.
 \\
 \\
+\\
+\\
+\\
+\\
+\\
+\\
+
 Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \end{enumerate}
 
@@ -322,9 +331,11 @@ Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \item If $S$ is finite and $P$ be a partition of $S$ then $P$ is finite and for all $s \in S, [s]^P$ is finite and $|S| = \Sigma_A \in P|A|$.
 \\
 \\
+Corollary 16 (Partition Counting) from NFC says:\\
+Let $P$ be a $finite$ partition of $X$ by $finite$ sets then $X$ is finite and $|X| = \Sigma_{A \in P}|A|$
 \\
 \\
-\\
+??
 \\
 \\
 
@@ -340,7 +351,21 @@ Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \end{enumerate}
 
 \newpage % Q13
-\item Prove Theorem 50: Let $S \subseteq \mathbb{Z}$ and define a relation $\sim_S$ on $\mathbb{Z}$ by $a \sim_S b$ if $a-b \in S$.  The relation $\sim_S$ is an equivalence relation on $\mathbb{Z}$ if and only if $S$ is a subgroup of $\mathbb{Z}$.
+\item Prove Theorem 50: Let $S \subseteq \mathbb{Z}$ and define a relation $\sim_S$ on $\mathbb{Z}$ by $a \sim_S b$ if $a-b \in S$.  The relation $\sim_S$ is an equivalence relation on $\mathbb{Z}$ if and only if $S$ is a subgroup of $\mathbb{Z}$.\\
+\\
+$\Rightarrow$ Assuming $\sim_S$ is an equivalence relation on $\mathbb{Z}$, we want to show $S$ is a subgroup of $\mathbb{Z}$
+\\
+\\
+\\
+\\
+\\
+
+$\Leftarrow$ Assuming $S$ is a subgroup of $\mathbb{Z}$, we want to show $\sim_S$ is an equivalence relation on $\mathbb{Z}$
+\\
+\\
+\\
+\\
+\\
 
 \newpage % Q14
 \item Let $P$ be an additive partition of $\mathbb{Z}$. Show that $[0]^P$ is a subgroup of $P$.
