@@ -104,7 +104,7 @@ d =& 23\\
 \newpage % Q9
 \item 
 \begin{enumerate}
-\item Let $r_0 = 8245, r_1 = 2584$.  Show the steps in the extended Euclidean algorithm to get
+\item Let $r_0 = 8245, r_1 = 2584$.  Show the steps in the extended Euclidean algorithm to get:
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -119,16 +119,18 @@ s_{k+1} & t_{k+1} & 0 \\
  1 & 0 & 8245 \\
  0 & 1 & 2584 \\
 \end{array}
-\right)\\
+\right)
 \end{equation*}
+$$\xrightarrow[\text{md(8245, 2584)=493}]{\text{qt(8245, 2584)=3}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
  0 & 1 & 2584 \\
  1 & -3 & 493 \\
 \end{array}
-\right)\\
+\right)
 \end{equation*}
+$$\xrightarrow[\text{md(2584, 493)=119}]{\text{qt(2584, 493)=5}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -137,6 +139,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
+$$\xrightarrow[\text{md(493, 119)=17}]{\text{qt(493, 119)=4}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -144,16 +147,16 @@ s_{k+1} & t_{k+1} & 0 \\
  21 & -67 & 17 \\
 \end{array}
 \right)
-\end{equation*}\\
+\end{equation*}
+$$\xrightarrow[\text{md(119, 17)=0}]{\text{qt(119, 17)=7}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
  21 & -67 & 17 \\
  -152 & 485 & 0 \\
 \end{array}
-\right)\\
+\right)
 \end{equation*}
-
 
 \item Give the steps to find $(m_{8245}, n_{2584})$.  You Should get (21, -67)
 \\
@@ -185,7 +188,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
+$$\xrightarrow[\text{md(79, 33)=13}]{\text{qt(79, 33)=2}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -194,7 +197,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
+$$\xrightarrow[\text{md(33, 13)=7}]{\text{qt(33, 13)=2}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -203,7 +206,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
+$$\xrightarrow[\text{md(13, 7)=6}]{\text{qt(13, 7)=1}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -212,7 +215,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
+$$\xrightarrow[\text{md(7, 6)=1}]{\text{qt(7, 6)=1}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -221,7 +224,7 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
+$$\xrightarrow[\text{md(6, 1)=0}]{\text{qt(6, 1)=6}}$$
 \begin{equation*}
 \left(
 \begin{array}{ccc}
@@ -230,7 +233,6 @@ s_{k+1} & t_{k+1} & 0 \\
 \end{array}
 \right)
 \end{equation*}
-
 
 
 \item Give the steps to find $(m_{79}, n_{33})$.  You Should get (28, -67)
