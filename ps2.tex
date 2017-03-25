@@ -42,9 +42,19 @@ Let $a, b$ be integers, where $a \neq 0$ or $b \neq 0$
 \begin{enumerate}
 \item Generalizing BB Proposition 1.2.3.d, Show that if $(a,b_1)=(a,b_2)=... (a,b_n)=1$ then $(a,b_1 b_2 ... b_n) = 1$\\
 \\
+\\
+\\
+\\
+\\
 \item Show that if $(a, b) = 1$ then $(a^n, b^n) = 1$\\
 \\
+If $(a,b) = 1$, then $(a^n,b) = 1$, so $(a^n,b^n) = 1$
+\\
+\\
+\\
 \item Show that if $(a, b_1 b_2...b_n) = 1$ then $(a, b_1) = (a, b_2) = ... (a,b_n) = 1$\\
+\\\\
+\\
 \\
 \item Generalizing BB Proposition 1.2.3.c, prove that if $a_1 | c$, $a_2| c$...$a_n|c$ and $(a_i, a_j) = 1$ for $i \neq j$ then $(a_1 a_2...a_n)|c$
 
@@ -121,16 +131,24 @@ Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{
 \item Let $a, b \in \mathbb{Z}^*$ and consider the subgroups $a\mathbb{Z}$ and $a\mathbb{Z}$.  Then $a\mathbb{Z} \cap b\mathbb{Z}$ is a set of common multiples of $a$ and $b$.
 \begin{enumerate}
 \item Show that $a\mathbb{Z} \cap b\mathbb{Z}$ is a non-trivial subgroup of $\mathbb{Z}$
-\\ What is $e$?!
+\\\\
 \\
 \\
 \\
 \\
 \\
-
+\\
+\\
+Let $m,n \in a\mathbb{Z} \cap ba\mathbb{Z}$, then
+\begin{itemize}
+  \item $m-n \in a\mathbb{Z} \cap ba\mathbb{Z}$
+  \item $0 \in (a\mathbb{Z} \cap ba\mathbb{Z})$
+  \item $k\mathbb{Z} \in (a\mathbb{Z} \cap ba\mathbb{Z})$ for $k \geq 0$
+\end{itemize}
 \item By BB Proposition we have a positive number $l$ such that $a\mathbb{Z} \cap b\mathbb{Z} = l\mathbb{Z}$.  Show that $l$ is the least common multiple of $m$ and $n$.  We will denote this least common multiple by lcm($a,b$) or [$a,b$].
 \\
 \\
+\\\\
 \\
 \\
 \\
@@ -355,18 +373,19 @@ Let $P$ be a $finite$ partition of $X$ by $finite$ sets then $X$ is finite and $
 \\
 $\Rightarrow$ Assuming $\sim_S$ is an equivalence relation on $\mathbb{Z}$, we want to show $S$ is a subgroup of $\mathbb{Z}$
 \\
-\\
-\\
-\\
-\\
-
+Let $a \in S$
+\begin{itemize}
+\item Reflexivity: $a -a = 0 \in S$
+\item Symmetry: $a - b \in S$, so $b -a \in S$
+\item Transitivity: $a - b \in S$, and $b -c \in S$, so $a - c \in G$
+\end{itemize}
 $\Leftarrow$ Assuming $S$ is a subgroup of $\mathbb{Z}$, we want to show $\sim_S$ is an equivalence relation on $\mathbb{Z}$
 \\
+$S$ is a subgroup, so $0 \in S$.  Then $a - 0 = a \in S$ so $a \sim_S a$ (Reflexivity)
 \\
+If $a \sim_S b$, then $a - b \in S \implies b -a \in S$, so $b \sim_S a$ (Symmetry)
 \\
-\\
-\\
-
+If $a \sim_S b$ and $b \sim_S c$ then $a -b \in S$ and $b -c \in S$, so $(a -b) - (b -c) = a -c \in S$, and $a \sim_S c$ (Transitivity)
 \newpage % Q14
 \item Let $P$ be an additive partition of $\mathbb{Z}$. Show that $[0]^P$ is a subgroup of $P$.
 
