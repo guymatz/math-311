@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
 
 \title{\textbf{Math 311 - Problem Set 2}}
 \author{Guy Matz}
@@ -42,10 +42,15 @@ Let $a, b$ be integers, where $a \neq 0$ or $b \neq 0$
 \begin{enumerate}
 \item Generalizing BB Proposition 1.2.3.d, Show that if $(a,b_1)=(a,b_2)=... (a,b_n)=1$ then $(a,b_1 b_2 ... b_n) = 1$\\
 \\
+Proof by Induction on b:\\
+Base Step: See BB Proposition 1.2.3.d
 \\
+Induction Hypothesis: Assume $(a,b_1b_2...b_n) = 1$ when $1 = (a,b_1) = (a,b_2) = ... = (a,b_n)$
 \\
-\\
-\\
+Proof: We want to show that $(a,b_1b_2...b_nb_{n+1}) = 1$ when $1 = (a,b_1) = (a,b_2) = ... = (a,b_n) = (a,b_{n+1})$.  By our Indiction Hypothesis, we know that the gcd of $a$ and the first $n$ values of b equals 1.  Replacing the first $n$ many values of $b$ we can rewrite $(a,b_1b_2...b_nb_{n+1}) = 1$ as $(a,kb_{n+1}) = 1$, where $k = b_1b_2...b_n$.  But this is the same as Proposition 1.2.3.d, so $(a,b_1b_2...b_nb_{n+1}) = 1$ when $1 = (a,b_1) = (a,b_2) = ... = (a,b_n) = (a,b_{n+1})$
+\begin{flushright} $\square$
+\end{flushright}
+
 \item Show that if $(a, b) = 1$ then $(a^n, b^n) = 1$\\
 \\
 If $(a,b) = 1$, then $(a^n,b) = 1$, so $(a^n,b^n) = 1$
@@ -53,9 +58,11 @@ If $(a,b) = 1$, then $(a^n,b) = 1$, so $(a^n,b^n) = 1$
 \\
 \\
 \item Show that if $(a, b_1 b_2...b_n) = 1$ then $(a, b_1) = (a, b_2) = ... (a,b_n) = 1$\\
-\\\\
 \\
-\\
+Proof by contradiction: Assume that if $(a, b_1 b_2...b_n) = 1$ then $(a, b_1) \neq (a, b_2) \neq ... (a,b_n) \neq 1$.  However, if $a$ and the product $b_1b_2...b_n$ do not have a common factor, then a cannot have a common factor with any $b_i$
+
+\begin{flushright} Contradiction
+\end{flushright}
 \item Generalizing BB Proposition 1.2.3.c, prove that if $a_1 | c$, $a_2| c$...$a_n|c$ and $(a_i, a_j) = 1$ for $i \neq j$ then $(a_1 a_2...a_n)|c$
 
 \end{enumerate}
@@ -63,7 +70,15 @@ If $(a,b) = 1$, then $(a^n,b) = 1$, so $(a^n,b^n) = 1$
 \newpage % Q4
 \item Prove the General Euclid Lemma: Let $p$ be prime and $S$ be a finite set of integers.  If $p|\Pi_{n \in S}n$ then there exists an $n \in S$ such that $p | n$
 \\
+Induction in $|S|$
+\\\\
+Base Step: $|S| = 1$.  Surely, if there is one element in $S$, and $p$ divides the product of elements in $S$, there exists an $n \in S$ such that $p | n$
 \\
+\\
+Induction Hypothesis: $|S| = k$.  For any set $S$ of size $k$, If $p|\Pi_{n \in S}n$ then there exists an $n \in S$ such that $p | n$
+\\
+\\
+Proof: For some $S$, where $|S| = k + 1$, suppose $p | \Pi_{n \in S}n$.  Then, by Euclid's Lemma, either it divides the product of the first $k$ elements or it divides the $k+1$ element.  Since either p divides the $k+1$ element or, by IH, p divides one of the first $k$ elements, we have $p |n, n \in S_{k+1}$
 
 \newpage % Q5
 \item Prove the following:
@@ -114,8 +129,6 @@ Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{
 \\
 \\
 \\
-\\
-
 \item Let $(r,s) = 1$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and that $ra = sb$.  Show that $r = \tfrac{b}{d}, s = \tfrac{a}{d}$ or $r = -\tfrac{b}{d}, s=\tfrac{a}{d}$
 \\
 \\
