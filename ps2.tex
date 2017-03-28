@@ -106,11 +106,10 @@ Towards a contradiction, assume $b^{e+1} \mid n$ when $n = b^em$ with $b \nmid m
 \item Let $n \in \mathbb{Z}$ and $p$ be prime, then $e = \epsilon(n,p)$ if and only if $n = p^em$ with gcd$(p,m) = 1$\\
 $\Rightarrow$ Assuming $e = \epsilon(n,p)$, we want to show $n = p^em$ with gcd$(p,m) = 1$\\
 \\
-minute 56 . . . If p is prime and p \nmid m then gcd(p,m) = 1.  there is no k such that pk =m
+minute 56 . . . If p is prime and $p \nmid m$ then gcd($p,m) = 1$.  there is no k such that pk =m
 $\Leftarrow$ Assuming $n = p^em$ with gcd$(p,m) = 1$, we want to show $e = \epsilon(n,p)$\\
 \\
 \\
-
 \end{enumerate}
 
 
@@ -123,7 +122,6 @@ Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{
 \\
 \item Suppose that gcd($r,s$) = 1 and gcd($a,b$) = 1 and that $ra = sb$.  Show that $r=b, s = a$ or $r = -b, s = -a$
 \\
-
 \\
 \\
 \item Let $(r,s) = 1$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and that $ra = sb$.  Show that $r = \tfrac{b}{d}, s = \tfrac{a}{d}$ or $r = -\tfrac{b}{d}, s=\tfrac{a}{d}$
@@ -339,17 +337,14 @@ For $a,b,c \in \mathbb{R}$ we define $a \sim b$ if $|a - b| \leq \delta$ for som
 \\
 \\Reflexivity: $a \sim a$, $|a-a| = 0 \leq \delta \checkmark$
 \\Symmetry: $a \sim b \implies b \sim a$, $|a-b| = |b-a|$, so if $|a-b| \leq \delta$, then $|b-a| \leq \delta  \checkmark$
-\\Transitivity: $a \sim b \wedge b \sim c \implies a \sim c$, This fails since, e,g, with $a = 5, b = 4, c = 3, |a-b| = 1$, and $|b-c| = 1$, however $|a-c| = 2$
+\\Transitivity: $a \sim b \wedge b \sim c \implies a \sim c$, This fails since, e,g, with $\delta = 1$, we may have $a = 5, b = 4, c = 3, |a-b| = 1$, and $|b-c| = 1$, however $|a-c| = 2$
 \item Show that if $\mathcal{R}$ on $S$ is symmetric and transitive but not reflexive there must be an $a \in S$ such that for all $b \in S$, $a /\mathcal{R} b$ and $b  /\mathcal{R} a$. In terms of set theory this is $\{a\} \times S \cup S \times \{a\} \cap \mathcal{R} = \phi$. In this case we say that $a$ is isolated with respect to $\mathcal{R}$. Now give an example of a $S$ and a relation $\mathcal{R}$ on $S$ which is symmetric, transitive but not reflexive.
 \\
+Towards a contradiction, assume $\mathcal{R}$ is symmetric, transitive, NOT reflexive, and $\forall a \in S \exists b \in S: a\mathcal{R}b$ or $b\mathcal{R}a$
+\\
+By assumption, $a \mathcal{R} b$ for some $b$, and $b \mathcal{R} a$ by symmetry.  We there forefore have $a \mathcal{R} a$ by transitivity, however $\mathcal{R}$ is not reflexive.
 \\
 \\
-\\
-\\
-\\
-\\
-\\
-
 Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \end{enumerate}
 
@@ -385,9 +380,9 @@ $\Rightarrow$ Assuming $\sim_S$ is an equivalence relation on $\mathbb{Z}$, we w
 \\
 Let $a \in S$
 \begin{itemize}
-\item Reflexivity: $a -a = 0 \in S$
-\item Symmetry: $a - b \in S$, so $b -a \in S$
-\item Transitivity: $a - b \in S$, and $b -c \in S$, so $a - c \in G$
+\item Show $0 \in S$: Since $1 \sim_S 1$, we have $1-1=0 \in S$
+\item Show $a, b \in S \implies a + b \in S$:  If $a, b \in S$, then $a \sim_S 0$ and $b \sim_S 0$.  Then $0 \sim_S -a$ since $0 - (-a) \in S$.  By transitivity, we then have $b \sim_S -a$ and $a + b \in S$  
+\item Show $a \in S \implies -a \in S$:  Let $a \in S$.  Then $a \sim_S 0$ and $0 - a \in S$, so $-a \in S$
 \end{itemize}
 $\Leftarrow$ Assuming $S$ is a subgroup of $\mathbb{Z}$, we want to show $\sim_S$ is an equivalence relation on $\mathbb{Z}$
 \\
@@ -398,7 +393,14 @@ If $a \sim_S b$, then $a - b \in S \implies b -a \in S$, so $b \sim_S a$ (Symmet
 If $a \sim_S b$ and $b \sim_S c$ then $a -b \in S$ and $b -c \in S$, so $(a -b) - (b -c) = a -c \in S$, and $a \sim_S c$ (Transitivity)
 \newpage % Q14
 \item Let $P$ be an additive partition of $\mathbb{Z}$. Show that $[0]^P$ is a subgroup of $P$.
-
+\\
+\begin{itemize}
+\item $0 \in [0]^P$
+\item WTS $a,b \in [0]^P \implies a + b \in [0]^P$\\
+$a + b \in [0]^P + [0]^P = [K]^P$ for some $K$.  Since $ 0 + 0 \in [K]^P, [K]^P = [0]^P$
+\item WTS $a \in [0]^P \implies -a \in [0]^P$\\
+TBD!!
+\end{itemize}
 
 \newpage % Q15
 \item
@@ -406,10 +408,10 @@ If $a \sim_S b$ and $b \sim_S c$ then $a -b \in S$ and $b -c \in S$, so $(a -b) 
 \item Let $G$ be a subgroup of $\mathbb{Z}$. By Theorem 50, $\sim_G$ is an equivalence relation. Show that $[a]_{\sim_G} = \{a\}+G = ???$ . Notice that $\{a\} + G = \{a + g : g \in S\}$
 \\
 \\
+We first want to show that $[a]_{\sim_G} \subseteq \{a\} + G$.\\
+Let $b \in [a]_{\sim_G}$.  Then $a - b \in G$ and $a - b = g \in G$.  Since $b = a + (-g) \in G$, $b \in \{a\} + G$\\
 \\
-\\
-\\
-\\
+To show $\{a\} + G \subseteq [a]_{\sim_G}$, let $b \in \{a\} + G$.  Then, since $b = a + g \in G$, $a - b = -g \in G$
 \\
 \\
 
