@@ -64,7 +64,15 @@ Proof by contradiction: Assume that if $(a, b_1 b_2...b_n) = 1$ then $(a, b_1) \
 \begin{flushright} Contradiction
 \end{flushright}
 \item Generalizing BB Proposition 1.2.3.c, prove that if $a_1 | c$, $a_2| c$...$a_n|c$ and $(a_i, a_j) = 1$ for $i \neq j$ then $(a_1 a_2...a_n)|c$
-
+\\
+Base Step: See BB Proposition 1.2.3.c
+\\
+Induction Hypothesis: Assume that if $a_1|c, a_2|c,...,a_n|c$ and $(a_i,a_j) = 1$ for $i \neq j$, then ($a_1a_2...a_n)|c$
+\\
+Proof: We want to show that if $a_1|c, a_2|c,...,a_{n+1}|c$ and $(a_i,a_j) = 1$ for $i \neq j$, then ($a_1a_2...a_{n+1})|c$.  Let $k = a_1a_2...a_n$, then by our Induction Hypothesis, $k|c$.  Since $k|c$ and $a_{n+1}|c$, by Propsition 1.2.3.c, $ka_{n+1}|c$
+\begin{flushright}$\square$
+\end{flushright}
+IS THAT ENOUGH?
 \end{enumerate}
 
 \newpage % Q4
@@ -83,34 +91,23 @@ Proof: For some $S$, where $|S| = k + 1$, suppose $p | \Pi_{n \in S}n$.  Then, b
 \newpage % Q5
 \item Prove the following:
 \begin{enumerate}
-\item Let $n \in \mathbb{Z}$ and $2 \leq \mathbb{N}$.  We have $e = e(n,b)$ if and only if $n = b^em$ with $b \nmid m$\\
+\item Let $n \in \mathbb{Z}$ and $2 \leq n$.  We have $e = \epsilon(n,b)$ if and only if $n = b^em$ with $b \nmid m$\\
 \\
-$\Rightarrow$ Assuming $e = e(n,b)$, we want to show $n = b^em$ with $b \nmid m$\\
+$\Rightarrow$ Assuming $e = \epsilon(n,b)$, we want to show $n = b^em$ with $b \nmid m$\\
 \\
-\\
-\\
-\\
-\\
-
-$\Leftarrow$ Assuming $n = b^em$ with $b \nmid m$, we want to show $e = e(n,b)$\\
+Towards a contradiction, if $b|m$, then $m = bk$, for some $k$.  Then $n = b^{e+1}k$, however $e$ was the highest exponent for $b$, so $n = b^em$ with $b \nmid m$
 \\
 \\
+$\Leftarrow$ Assuming $n = b^em$ with $b \nmid m$, we want to show $e = \epsilon(n,b)$\\
 \\
-\\
+Towards a contradiction, assume $b^{e+1} \mid n$ when $n = b^em$ with $b \nmid m$.  Then $b^{e+1}k = n$ for some $k \in \mathbb{Z}$.  This can be rewritten as $b^em = n$, where $k = bm$, so $b^{e+1}k = b^em$, and $bk=m$.  This contradicts our assumption that $b \nmid m$, so $e = \epsilon(n,b)$
 \\
 
-\item Let $n \in \mathbb{Z}$ and $p$ be prime, then $e = e(n,b)$ if and only if $n = p^em$ with gcd$(p,m) = 1$\\
-$\Rightarrow$ Assuming $e = e(n,b)$, we want to show $n = p^em$ with gcd$(p,m) = 1$\\
+\item Let $n \in \mathbb{Z}$ and $p$ be prime, then $e = \epsilon(n,p)$ if and only if $n = p^em$ with gcd$(p,m) = 1$\\
+$\Rightarrow$ Assuming $e = \epsilon(n,p)$, we want to show $n = p^em$ with gcd$(p,m) = 1$\\
 \\
-\\
-\\
-\\
-\\
-
-$\Leftarrow$ Assuming $n = p^em$ with gcd$(p,m) = 1$, we want to show $e = e(n,b)$\\
-\\
-\\
-\\
+minute 56 . . . If p is prime and p \nmid m then gcd(p,m) = 1.  there is no k such that pk =m
+$\Leftarrow$ Assuming $n = p^em$ with gcd$(p,m) = 1$, we want to show $e = \epsilon(n,p)$\\
 \\
 \\
 
@@ -126,7 +123,7 @@ Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{
 \\
 \item Suppose that gcd($r,s$) = 1 and gcd($a,b$) = 1 and that $ra = sb$.  Show that $r=b, s = a$ or $r = -b, s = -a$
 \\
-\\
+
 \\
 \\
 \item Let $(r,s) = 1$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and that $ra = sb$.  Show that $r = \tfrac{b}{d}, s = \tfrac{a}{d}$ or $r = -\tfrac{b}{d}, s=\tfrac{a}{d}$
