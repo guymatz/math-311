@@ -106,10 +106,14 @@ Towards a contradiction, assume $b^{e+1} \mid n$ when $n = b^em$ with $b \nmid m
 \item Let $n \in \mathbb{Z}$ and $p$ be prime, then $e = \epsilon(n,p)$ if and only if $n = p^em$ with gcd$(p,m) = 1$\\
 $\Rightarrow$ Assuming $e = \epsilon(n,p)$, we want to show $n = p^em$ with gcd$(p,m) = 1$\\
 \\
-minute 56 . . . If p is prime and $p \nmid m$ then gcd($p,m) = 1$.  there is no k such that pk =m
+$e = \epsilon(n, p)$, so by definition, and as shown above in 1a, $n = p^em$.  Since $p$ is prime, the gcd($p,m)$ is either 1 or $p$.  By 1a above we know that $p \nmid m$, so gcd($p, m) = 1$
+\\
+\\
 $\Leftarrow$ Assuming $n = p^em$ with gcd$(p,m) = 1$, we want to show $e = \epsilon(n,p)$\\
 \\
+Toward a contradiction, assume $n = p^{e+1}m$.  Then $n = p^epm = p^ek$, where $k = pm$.  However, then $p$ and $m$ share a common divisor, which violates our assumption that gcd$(p,m) = 1$, so $e = \epsilon(n,p)$\\
 \\
+SOMETHING NOT QUITE RIGHT HERE??
 \end{enumerate}
 
 
@@ -121,17 +125,20 @@ $\Leftarrow$ Assuming $n = p^em$ with gcd$(p,m) = 1$, we want to show $e = \epsi
 Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{n}{d} = 1$, which implies gcd($\tfrac{m}{d} , \tfrac{n}{d}) = 1$
 \\
 \item Suppose that gcd($r,s$) = 1 and gcd($a,b$) = 1 and that $ra = sb$.  Show that $r=b, s = a$ or $r = -b, s = -a$
+\\\\
+For $0 < a,b,r,s \in \mathbb{Z}$ we know that $r=\tfrac{sb}{a}$, and since gcd($a,b$) = 1 we can say $a \mid s$.  We can also say that $b=\tfrac{ra}{s}$, and that, since gcd($r,s$) = 1 it is also the case that $s \mid a$.  Hence $s = a$.  Following similar manipulations we can also say $r = b$.
 \\
-\\
+In order to maintain the equality $ra = sb$ for $0 < a,b \in \mathbb{Z} < 0$ it must be that $r = -b$ and $s = -a$ so that $r \cdot (-(-d)) = rd$ and $s \cdot (-(-s)) = sa$
 \\
 \item Let $(r,s) = 1$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and that $ra = sb$.  Show that $r = \tfrac{b}{d}, s = \tfrac{a}{d}$ or $r = -\tfrac{b}{d}, s=\tfrac{a}{d}$
-\\
-\\
-\\
-\\
+\\\\
+This follows from a and b above.  CAN I SAY JUST THIS?
 \\
 
-\item Let $r,s \in \mathbb{Z}_*$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$ and suppose that $ra = sb$.  Show that $\tfrac{r}{f} = \tfrac{b}{d}, \tfrac{s}{f} = \tfrac{a}{d}$ or $\tfrac{r}{f} = -\tfrac{b}{d}, \tfrac{s}{f}=\tfrac{a}{d}$
+\item Let $r,s \in \mathbb{Z}_*$, $a,b \in \mathbb{Z}^*$, $d$ = gcd$(a,b)$, $f$ = gcd$(r,s)$ and suppose that $ra = sb$.  Show that $\tfrac{r}{f} = \tfrac{b}{d}, \tfrac{s}{f} = \tfrac{a}{d}$ or $\tfrac{r}{f} = -\tfrac{b}{d}, \tfrac{s}{f}=\tfrac{a}{d}$
+\\
+\\
+This follows from a and b above.  CAN I SAY JUST THIS?
 \end{enumerate}
 
 
@@ -139,19 +146,19 @@ Since $\lambda m + \omega n = d$, we have $\lambda \tfrac{m}{d} + \omega \tfrac{
 \item Let $a, b \in \mathbb{Z}^*$ and consider the subgroups $a\mathbb{Z}$ and $a\mathbb{Z}$.  Then $a\mathbb{Z} \cap b\mathbb{Z}$ is a set of common multiples of $a$ and $b$.
 \begin{enumerate}
 \item Show that $a\mathbb{Z} \cap b\mathbb{Z}$ is a non-trivial subgroup of $\mathbb{Z}$
-\\\\
 \\
 \\
-\\
-\\
-\\
-\\
-\\
-Let $m,n \in a\mathbb{Z} \cap ba\mathbb{Z}$, then
+Let $m,n \in a\mathbb{Z} \cap b\mathbb{Z}$, then
 \begin{itemize}
-  \item $m-n \in a\mathbb{Z} \cap ba\mathbb{Z}$
-  \item $0 \in (a\mathbb{Z} \cap ba\mathbb{Z})$
-  \item $k\mathbb{Z} \in (a\mathbb{Z} \cap ba\mathbb{Z})$ for $k \geq 0$
+  \item $m \cdot n \in a\mathbb{Z} \cap b\mathbb{Z}$\\
+  If $m = mab$ and $n = nab$, then $m \cdot n = mab \cdot nab = ab(m \cdot n)$ which is a multiple of ab, and so is an element of $a\mathbb{Z} \cap b\mathbb{Z}$\\
+  \item $0 \in (a\mathbb{Z} \cap b\mathbb{Z})$\\
+  Let $m,n = 0$, then $m \cdot n = 0 \in (a\mathbb{Z} \cap b\mathbb{Z})$\\
+  Is e = 0 HERE?  Or 1?!
+  \\
+  \item $a^{-1} \in a\mathbb{Z} \cap b\mathbb{Z}$\\
+  I DON"T SEE HOW $a$ CAN HAVE AN INVERSE IF $a,b \in \mathbb{Z}$!!
+  
 \end{itemize}
 \item By BB Proposition we have a positive number $l$ such that $a\mathbb{Z} \cap b\mathbb{Z} = l\mathbb{Z}$.  Show that $l$ is the least common multiple of $m$ and $n$.  We will denote this least common multiple by lcm($a,b$) or [$a,b$].
 \\
@@ -328,7 +335,7 @@ $$(n_{79}, m_{33}) = (s_k, t_k) = (-5, 12)$$
 \\
 For integers $a, b$ we define $a \sim b$ if $a \leq b$\\
 \\Reflexivity: $a \sim a$, $a \leq a \checkmark$
-\\Symmetry: $a \sim b \implies b \sim a$, If $a \leq b$ then $b \leq a$. $X$ 
+\\Symmetry: $a \sim b \implies b \sim a$, If $a \leq b$ then $b \leq a$. This fails since, for example, if $a=4$ and $b = 5$, then $4 \leq 5$, but $5 \nleq 4$  X 
 \\Transitivity: $a \sim b \wedge b \sim c \implies a \sim c$, If $a \leq b$ and $b \leq c$, then $a \leq c \checkmark$
 \\
 \item Give an example of a set $S$ and a relation on $\mathcal{R}$ on $s$ which is reflexive and symmetric but not transitive:\\
@@ -351,14 +358,10 @@ Example: For integers $a,b$ we define $a \sim b$ if $|a-b| > 0$
 \newpage % Q12
 \item Prove Theorem 44. Each proof should be one or two lines which are references to the results in our notes on finite sets and counting. You should refer to this document by NFC.
 \begin{enumerate}
-\item If $S$ is finite and $P$ be a partition of $S$ then $P$ is finite and for all $s \in S, [s]^P$ is finite and $|S| = \Sigma_A \in P|A|$.
+\item If $S$ is finite and $P$ be a partition of $S$ then $P$ is finite and for all $s \in S, [s]^P$ is finite and $|S| = \Sigma_{A \in P}|A|$.
 \\
 \\
-Corollary 16 (Partition Counting) from NFC says:\\
-Let $P$ be a $finite$ partition of $X$ by $finite$ sets then $X$ is finite and $|X| = \Sigma_{A \in P}|A|$
-\\
-\\
-??
+By Theorem 26 of NFC we have that the order of a finite set under a surjection is equal to the order of the domain.
 \\
 \\
 
@@ -386,7 +389,7 @@ Let $a \in S$
 \end{itemize}
 $\Leftarrow$ Assuming $S$ is a subgroup of $\mathbb{Z}$, we want to show $\sim_S$ is an equivalence relation on $\mathbb{Z}$
 \\
-$S$ is a subgroup, so $0 \in S$.  Then $a - 0 = a \in S$ so $a \sim_S a$ (Reflexivity)
+$S$ is a subgroup, so $0 \in S$.  Then $a - a = 0 \in S$ so $a \sim_S a$ (Reflexivity)
 \\
 If $a \sim_S b$, then $a - b \in S \implies b -a \in S$, so $b \sim_S a$ (Symmetry)
 \\
@@ -405,7 +408,7 @@ TBD!!
 \newpage % Q15
 \item
 \begin{enumerate}
-\item Let $G$ be a subgroup of $\mathbb{Z}$. By Theorem 50, $\sim_G$ is an equivalence relation. Show that $[a]_{\sim_G} = \{a\}+G = ???$ . Notice that $\{a\} + G = \{a + g : g \in S\}$
+\item Let $G$ be a subgroup of $\mathbb{Z}$. By Theorem 50, $\sim_G$ is an equivalence relation. Show that $[a]_{\sim_G} = \{a\}+G$ . Notice that $\{a\} + G = \{a + g : g \in S\}$
 \\
 \\
 We first want to show that $[a]_{\sim_G} \subseteq \{a\} + G$.\\
