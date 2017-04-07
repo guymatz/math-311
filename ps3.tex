@@ -136,43 +136,14 @@
 %To turn the answer into problem sets use replace to replace \begin{comment} with \begin{comment} and \\end{comment}  by \end{comment}.
 \newcommand{\lieb}[3][{{}}]{\frac{d^#1 #2}{d\,#3^#1}}
 \begin{document} 
-\begin{center} Problem Set 3 Part 1.
-\end{center}
-This is the first part of Problem Set 3. The second half will be on groups.
 
-\section{Congruence Classes vs $Z_n$}
- Let $S\subseteq \mbZ$
- at the end of Problem set 2 we proved 
-\bet  \label{groupequiv} Let $S\subseteq \mbZ$ and define a relation $\sim_S$ on $\mbZ$ by $a\sim_S b$ if $a-b\in S$.The relation $\sim_S$ is an equivalence relation on $\mbZ$ if and only if $S$ is a subgroup of $\mbZ$..
-\et
-\bnot For $G$ a sub-group of $\mbZ$ we denote $\mbZ/\nts\sim_G$ by $\mbZ/G$.
-\enot
-\bnot Let $G$ be an {\em arbitrary} subset of $\mbZ$ that is $G\subseteq \mbZ$.When $G$ is a subgroup of $\mbZ$ we will write $G\leq \mbZ$.
-\enot
+\begin{enumerate}
 
-\bnot If $G$ happens to be the group $n\mbZ$ then  by BB Theorem 1.3.2 we have $a\equiv_n b$ if and only if $a\sim_{n\mbZ} b$. Thus the set of congruence classes mod $n$ is exactly the set $\mbZ/\nts n\mbZ$. So instead of using BB's 
-notation $\bm{Z}_n$ we will use the notation $Z/nZ$. We will use the notation $Z_n$ for the set $\{0,1,2,\dots n-1\}$. 
-\enot
-\bnot Let $n$ be a positive integer then we have the map $r_n\colon \mbZ\to Z_n$ given by using the division algorithm to write $m=qn+r$ in which case $r_n(m)=r$. 
-\enot
-We have $r_n$ is a surjection and using the notation of BB Example 2.2.2 we have $\mbZ/r_n=Z/nZ$. Furthermore  since we have $r_n\colon \mbZ\to Z_n$ is surjective using the maps of  BB figure 2.2.1 we have $r_n=\overline{r_n}\circ\pi$
-and  $\overline{r_n}\colon Z/nZ\to Z_n$ is a bijection. We can compute this map by given $A\in Z/nZ,\overline{r_n}(A)=r_n(a)$ for any $a\in A$. We have $\overline{r_n}^{-1}(i)=[i]_n$. Given the addition and multiplication $Z/nZ$ given in BB 
-1.4.2 we can define an addition, $+_n$ and $\cdot_n$  on $Z_n$ by for $i,j\in Z_n, i+_n j=\overline{r}_n([i]_n+[j]_n), i\cdot_n j=\overline{r}_n([i]_n\cdot  [j]_n)$ with this definition we will have, for any $A,B\in Z/nZ$ $\overline{r_n}(A+B)=\overline{r_n}(A)+_n\overline{r_n}(B)$
-and $\overline{r_n}(A\cdot B)=\overline{r_n}(A)\cdot_n\overline{r_n}(B)$ When from context we know $n$ and that we are computing in $Z_n$ instead of writing $i+_nj$ and $i\cdot_n$ we will just write $i+j$ and $i\cdot j$.
-\subsection{Computing in $Z_n$}
-The easiest  way to compute in $Z_n$ is to do computations through a series of  equivalences mod $n$ with the final result in $Z_n$.
-\bax Compute $2^{16}$ in $Z_{19}$. First observe that $2^4\equiv_{19} -3$ hence 
-\begin{equation*} \begin{split}
-2^{16}\equiv_{19}(-3)^4  \equiv_{19}(-3)^{3}&(-3)\\ &\equiv_{19}(-27)(-3)   \equiv_{19}11\cdot  (-3)\\
-&\equiv_{19} -33 \equiv_{19}5\in Z_{19}
-\end{split}
-\end{equation*}
-\ax
-We work in $Z_n$ rather than $Z/nZ$ to avoid the constant annoyance of having to write $[i]$ instead of $i$.
 
-In $Z_n$ we write $-a$ for the element $b$ such that $a+b=0$ and $a-b=a+(-b)$.
+\item
+\benu
+\item Compute the addition and multiplication tables for $Z_5$.
 
-\bax The addition and multiplication tables in $Z_4$. 
 The table for addition:
 \begin{equation*}
 \begin{array}{c|cccc}
@@ -195,241 +166,75 @@ The table for multiplication
 3 &0&3&2&1
 \end{array}
 \end{equation*}
-\ax
-\bex
-\benu \item Compute the addition and multiplication tables for $Z_5$.
+
 \item Compute the addition and multiplication tables for $Z_6$
+
+The table for addition:
+\begin{equation*}
+\begin{array}{c|cccc}
++ & 0 & 1&2 & 3\\
+\hline
+0 & 0& 1& 2 & 3\\
+1& 1 &2&3&0\\
+2 &2 &3&0&1\\
+3 &3&0 & 1 &2
+\end{array}
+\end{equation*}
+The table for multiplication
+\begin{equation*}
+\begin{array}{c|cccc}
+\cdot &0&1&2&3\\
+\hline
+0&0&0&0&0\\
+1&0&1&2&3\\
+2 &0&2&0&2\\
+3 &0&3&2&1
+\end{array}
+\end{equation*}
+
 \eenu
-\ex
-\subsection{Linear Equations in $Z_n$}
-\subsubsection{The homogeneous case}
-Consider the equation $ax=0$ in $Z_n$:
 
-Let $(a,n)=d$. We $ax=0$ in $Z_n$ t if and only if  $ax=kn$. Let $d=(a,n)$.
-\bet We have $ax=0$ in $Z_n$  if and only if $\frac{n}{d}|x$
-\et
+\newpage %q2
+\item Find all of the solutions to $567x\equiv 238 \mod 665$. Check your results.
 
-\pru We have $ax=0$ in $Z_n$  if and only if in $\mbZ$, $ax=kn$. However $ax=kn$ if and only if $frac{a}{d}x=k\frac{n}{d}$ if and only if $\frac{n}{d}|\frac{a}{d}x$. However $\frac{a}{d}$ and $\frac{n}{d}$ are relatively prime so $\frac{n}{d}|\frac{a}{d}x$ if and only if $\frac{n}{d}|x$.
-\bec Suppose that $(a,n)=1$ then, in $Z_n$, $ax=0$ if and only if $x=0$.
-\ec
-
-\bec Suppose $(a,n)=d$ then $ax=0$ in $Z_n$ if and only if $x\in \{i\frac{n}{d}: 0\leq i\leq d$\}
-\ec
-Now we have $ab=ac$ in $Z_n$ if and only if $a(b-c)=0$, that is $\frac{n}{d}|(a-b)$
-
-\subsubsection{The inhomogeneous Case}
-Consider the equation $ax=b$ in $Z_n$.
-\bel \label{existssol}  If $ax=b$ has a solution in $Z_n$ then $(a,n)|b$
-\el
-
-\pru In $\mbZ$ we have $b=kn-ax$. We have $(a,n)|ax$ and $kn$ and hence $(a,n)lb$.
-\bet In $Z_m$ $ax=1$ has a solution if and only $(a,m)=1$. 
-\et
-
-\pru Suppose $ax=1$ in$Z_m$ then $(a,m)|1$ hence $(a,m)=1$. Conversely suppose that $(a,m)=1$.Then in $\mbZ$ we for some $x$ and some $k$, $xa-km=1$ so $ax=1$ has a solution in $Z_m$.
-
-Take  $(a,m)=1$ how do we compute $x\in Z_m$ such that $ax=1$. We know by the definition of $(a,m)$ that there are $\lambda$ and $\omega$ such that $\lambda a+\omega m=1$. As we did in the previous problem set we can write 
-$\lambda=qm+r$ with $r\in Z_m$ then in $\mbZ$ we have $ra+(qma)=1-\omega m$. Equivalently  $ra=1+(-\omega-qa)m$. In $Z_m$ we have $ar=1$. If we want to compute with Mathematica or WolframAlpha we take  $\bm{\ExtendedGCD[a,n]}$ and get $\bm{\{1,\{\lambda,\omega\}\}}$ then $\bm{r}$ is $\bm{\Mod[\lambda,m]}$.  For $a,r\in Z_n$ with $ar=1$ we write $r=a^{-1},a=r^{-1}$..
-
-Suppose that $(a,m)=1$ then $x=a^{-1}b$ is the solution to the inhomogeneous equation $ax=b$ in $Z_m$.
-\subsubsection[The General Inhomogeneous Equation]
-We wish to solve the general inhomogeneous equation $ax=b$ in $Z_m$ in the case $(a,m)$ is not necessarily $1$. Let $d=(a,m)$. If $ax=b\in Z_n$ then $d|b$. Let $d=(a,m)$ $\alpha=\frac{a}{d},\mu=\frac{m}{d}$, $\beta=\frac{b}{d}$. If $ax=b\in Z_m$ 
-then $\alpha x=\beta$ in $Z_\nu$. So we compute $\alpha^{-1}\in Z_\nu$ then $\alpha (\alpha^{-1}\beta)=\beta\in Z_{\frac{m}{d}}$. Hence we have $x=\alpha^{-1}\beta$ is a solution in $Z_\mu$ and $x$ is a solution to $ax=b$ in $Z_m$
-\bax Solve $65 x=385$ in $Z_{605}$.\ax
-We are going to use WolframAlpha or Mathematica. First we check $\bm{\GCD[65,605]}=5$ and $\bm{[\GCD[385,605]}=55$. We have $5|55$ so we have solutions. First we solve the homogeneous equation $65 y=0$ in $Z_{605}$. We have $605/5=121$ and so the solutions to $65y=0$ in $Z_{605}$ are $\{121i:0\leq i<5\}=\{0,121,242,363,484\}$. We have $65/5=13,605/5=121$ and $385/5=77$. So we wish to solve $13y=77$ in $Z_{121}$. We compute $\bm{\ExtendedGCD[13,121]}$ and get
- $\bm{\{1,\{28,-3\}\}}$ so in $Z_{121}$ we have $13^{-1}=28$ and a solution to $13x=77$ in $Z_{121}$ is $\bm{\Mod[28*77,121]}=99$. The the solutions to the inhomogeneous equation $65x=385$ in $Z_{605}$ are $\{99+i121:0\leq i\leq 4\}=\{99,220,341,462,583\}$. We can check thsi.
- \begin{enumerate}[series=p]
- \itep Find all of the solutions to $567x\equiv 238 \mod 665$. Check your results.
- \end{enumerate}
-\section{The Chinese Remainder Theorem}
-Suppose we have $H\leq G\leq Z$. If $a\sim_H b$ then $a-b\in H$ and so $a-b\in G$ thus we get a map $\pi_{H,G}\colon \mb{ Z}/H\to \mb{Z}/H$. If $m|n$ then $n\mb{Z}\leq m\mb{Z}$ and so we have a map $\pi_{m,n}\colon \mb{Z}/m \mb{Z} \to \mb{Z}/n\mb{Z}$.
-This we have the following diagram:
-
-Suppose we have $H\leq G\leq \mb{Z}$. If $a\sim_H b$ then $a-b\in H$ and so $a-b\in G$ thus we get a map $\pi_{H,G}\colon \mbZ/H\to Z/H$. If $m|n$ then $n\mbZ\leq mZ$ and so we have a map $\pi_{m,n}\colon \mbZ/m \mbZ\to \mbZ/n \mbZ$.
-This we have the following diagram:
-
-\begin{comment}
-\begin{tikzcd}
-\mbZ/m \mbZ \arrow[r,rightarrow,"\overline{r_m}"]  \arrow[d,"\pi_{m,n}"] & Z_m \arrow[d,"r_{m,n}"]\\
-\mbZ/n \mbZ\arrow[r,rightarrow,"\overline{r_n}"] &Z_n
-\end{tikzcd}
-\end{comment}
-
- and
-the maps $\overline{r_m}$ and $\overline{r_n}$ are bijections
+\newpage %q3
 
 
-I leave it for you to check that for $A,B\in Z/mZ$ that  $\pi_{m,n}(A+B)=\pi_{m,n}(A)+\pi_{m,n}(B)$. This implies that for $i,j\in Z_m, r_{m,n}(i+_m +j)=r_{m,n}(i)+_nr_{m,n}(i)$ and  $r_{m,n}(i \cdot_m j)=r_{m,n}(i)\cdot_n r_{m,n}(i)$.
-\bet[BB 1.3.6 The Classical Chinese Remainder Theorem] Let $m$ and $n$ be integers with $(m,n)=1$ Then given any pair of integers $a,b$ there is an integer $x$ such that $x\equiv_m a$ and $x\equiv_n b$.
-
-\pru the proof is exactly as in the two paragraphs after BB 1.3.6 
-\et
-\bnot Recall that we denote the set $\{1,2,\dots n\}$ by $\underline{n}$
-\enot
-\bnot Let $n_i,i\in\underline{k}$ be positive integers
-\begin{align*}
-P&=\Pi_{j\in\underline{k}} n_j\\ 
-P_i&=\Pi_{\overset{j\in \underline{k}}{i\neq j}}n_j
-\end{align*}
-\enot
-\bet[ The multi-modulus Chinese remainder theorem]\label{gencrt} \hfill
-
-\bed
-\item[A]Let $n_1,n_2,\dots n_k$ be pairwise relatively prime and $a_1,a_2\dots a_k$ be integers then there is an integer $x$ such that for all $i\in\underline{n}, x\equiv_{n_i}a_i$.
-\item[B] If $x$ and $y$ are solutions to this set of equations then $x-y\equiv_P 0$
-\ed
-\et
-
-
-
-\begin{enumerate}[resume=p]
-\itep Prove the Multi-Modulus Chinese Remainder theorem.
+\item Prove the Multi-Modulus Chinese Remainder theorem.
  
 \benu 
 \item Refer to a result in Problem set 2 that shows $(n_i,P_i)=1$. Thus for each $i$ we can find $\lambda_i,\omega_i$ such that $\lambda_in_i+\omega_iP_i=1$
-
-\begin{comment}
+\\
+\\
 This follows from Problem Set 2 Problem 3a
-\end{comment}
-\item Take $x=\sum_{i=1}^na_i\omega_iP_i$ show that for all $i, x\equiv_{n_i}a_i$.
-\begin{comment} For all $i$ we have  $a_i\omega_iP_i\equiv_{n_i} a_i$ and for $j\neq i,n_j|P_i$ so $a_i\omega P_i\equiv_{n_j}0$. Hence for all $i$, $a_i\omega_{i}P_i+\sum_{j\neq i}a_j\omega_jP_j=x\equiv_{n_i} a_i$.
-\end{comment}
-\item Refer to a result in Problem set 2 that shows that if for all $i$ ,$x\equiv_{n_i}a_i$ and $y\equiv_{n_i} a_i$ then $x\equiv_P y$
-\begin{comment} Suppose that for all $i$ we have $x\equiv_{n_i}a_i$ and $y\equiv_{n_i} a_i$. Then for all $i, x-y\equiv_{n_i}0$. That is for all $i$ we have $n_i|(x-y)$. Since the $n_i$ are pairwise relatively prime, by Problem set 2 Problem 2d $P|(x-y)$.
-\end{comment}
-\eenu
-\end{enumerate} 
-Now let $n_1,n_2,\dots n_k$ be pairwise relatively prime and choose $a_i\in Z_{n_i}$ by the multi-modular CRT we can find $z\in \mb{Z}$ with $z\equiv_{n_i}a_i$. In fact by taking $x=r_{P}(z)$ we can find $x\in Z_{P}$ with $x\equiv_{n_i}a_i$, and if 
-$x,y\in Z_{P}$ are both solutions to this system of modular equivalences then $x=y$.
-
-\bnot
-Let $n_i,i=1,2,\dots n_k$ be  positive positively relatively prime integers.  We have the Cartesian product $\mc{P}=Z_{n_1}\times Z_{n_2}\times\dots Z_{n_k}$ and, using the notation of problem set 1, the map \[(r_{n_i},r_{n_2},\dots r_{n_k})\colon \mbZ\to \mc{P}.\] Using the diagram above we have the map
-\[R=(r_{P,n_1},r_{P,n_2},\dots r_{P,n_k})\colon Z_P\to \mc{P}\]
-\enot
-\bet[Rephrased Multi-modular Chinese Remainder Theorem] Let $n_1,n_2,\dots n_k$ be pairwise relatively prime then $R\colon Z_P\to \mc{P}$ is bijective
-\et
-\subsection{Using Mathematica to get a multi-modulus  CRT solution}
-\bnot
-Suppose we have relatively prime numbers $n_1,n_2,\dots n_k$ and $a_iZ_{n_i}$.  
-\begin{align*}
-P&=\Pi_{1\leq i\leq k}n_i\\
-P_i&=\Pi_{\overset{1\leq j\leq k}{j\neq i}}
-\end{align*}
-\enot
-Define $\omega_i$ by $\bm{\ExtendedGCD[n_i,P_i]}$ is $\{g,\{\lambda_i,\omega_i\}$
-Take 
-\[S=\sum_{i=1}^ka_i\omega_iP_i\]
-Then our solution is 
-\[\bm{Mod[S,P]}\]
-\bax Let 
-\begin{align*}n_1=15&,a_1=9\\n_2=32, &a_2=25\\n_3=77, &a_3=56
-\end{align*} 
-The numbers $15,32 \text{ and} 77$ are easily factored so there is no need to check pairwise relatively prime by evaluating {\bfseries GCD} on pairs.
-\begin{align*}
-P&=15\cdot32\cdot 77&=36960\\
-P_1&=32\cdot77&=2464\\
-P_2&=15\cdot 77&=1155\\
-P_3&=15\cdot32&=480\\
-\end{align*}
-\begin{align*}
-\bm{\ExtendedGCD[15,2464]}&=\{1,\{-657,4\}\},&\omega_1=4\\
-\bm{\ExtendedGCD[32,1155]}&=\{1,\{-397,11\}\},&\omega_2=11\\
-\bm{\ExtendedGCD[32,480]}&=\{1\{-187,30\}\},&\omega_3=30
-\end{align*}
-\[S=\sum_{i=1}^3 a_i\cdot w_i\cdot P_i=1212729\]
-\[
-\bm{\Mod[S,P]}=\bm{\Mod[1212729,36960]}=30009.
-\]
-We check:
-\begin{align*}
-\bm{\Mod[30009,15]}&=9&=a_1&\\
-\bm{\Mod[30009,32}&=25&=a_2\\
-\bm{\Mod[30009,77]}&=77&=a_3
-\end{align*}
-\ax
-\begin{enumerate}[resume=p]
-\itep
-Don't attempt this problem without WolframAlpha or Mathematica as it involves repeated evaluations of  the function
-{\bfseries ExtendedGCD}.
-
-Take
-\begin{align*}
-n_1=105,&a_1=27\\
-n_2=121,&a_2=35,\\
-n_3=64,&a_3=14\\
-n_4=169,&a_4=82
-\end{align*}
-We have $105\cdot121\cdot 64\cdot 169=137417280$
-Find $s \in Z_{137417280}$ such that 
-\begin{align*} 
-s &\equiv_{105} 27\\
-s &\equiv_{121}35\\
-s &\equiv_{64} 14\\
-s&\equiv_{169}82
-\end{align*}
-
-Show me the steps. You should get $107223822$.
-\end{enumerate}
-\section{Units and the totient (Euler's $\varphi$) function.}
-\bdf Given $i\in Z_n$ we have $i$ is a {\em unit} if there exist a $j\in Z_n$ such that $i\cdot j=1$. We denote the set of units by $Z_n^\ast$ in which case $\varphi(n)$ as defined in BB 1.4.7 is $|Z_n^\ast|$.
-\edf
-
-We give $\mc{P}=Z_{n_1}\times Z_{n_2}\times \dots Z_{n_k}$ a product and a sum by 
-\begin{align*}
-(i_1,i_2,\dots i_k)+(j_1,j_2,\dots j_k)&=(i_i+j_1,i_2+j_2,\dots i_k+j_k)\\
-(i_1,i_2,\dots i_k)\cdot(j_1,j_2,\dots j_k)&=(i_i\cdot j_1,i_2\cdot j_2,\dots i_k\cdot j_k)
-\end{align*}
-With this sum and product we have 
-\begin{align*}R(i+j)&=R(i)+R(j)\\
-R(i\cdot j)&=R(i)R(j)
-\end{align*}
-
-
-Within $\mc{P}$ we have the element $e=(1,1,\dots 1)$. Observe that $R(1)=e$.
-\bdf An element $a\in \Pi$ is a unit if there is a $b\in \Pi$ such that $a\cdot b=e$ and we denote the set of units of $\mc{P}$ by $\mc{P}^\ast$.
-\edf
-
-\bel  \label{units} \hfill
-\bed
-
-\item{A} $\mc{R}^\ast=Z_{n_1}^\ast \times Z_{n_2}^\ast\times\dots Z_{n_k}^\ast$
-\item{B} $R(Z_P^\ast)\subseteq\mc{R}^\ast$
-
-\ed
-\el
-\begin{enumerate}[resume=p]
-\itep
-\begin{comment}
-\end{comment}
-\end{enumerate}
-\bet Let $n_1,n_2,\dots n_k$ be positive integers
-\bed 
-\item[Unit Bijection] Let $n_1,n_2,\dots n_k$ be relatively prime then $R\colon Z_P^*\to \mc{P}*$ is a bijection.
-\item[Multiplicativity of the Totient] Let $n_1,n_2,\dots n_k$ be relatively prime then $\varphi(n_1n_2\dots n_k)=\varphi(n_1)\varphi(n_2)\dots \varphi(n_k)$.
-\item[Calculating $\varphi(p^n)$] Let $p$ be prime, Then $\varphi(p^n)=p^n-p^{n-1}=p^n(1-\frac{1}{p})$
-\item[BB Corollary 3.5.6] Let $n$ be a positive integer with the prime decomposition $p_1^{e_1}p_2^{e_2}\dots p_k^{e_k},p_1<p_2<\dots p_k$ then
-\[
-\varphi(n)=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\dots(1-\frac{1}{p_k})
-\]
-\ed
-\et
-\begin{enumerate}[resume=p]
-\itep
-\benu
+\\
 \item
- Prove {\bfseries Unit Bijection}
-\item Prove {\bfseries Multiplicativity of the Totient}
- \item Why is the calculation of $\varphi(p^n)$ correct
- \item Prove BB Corollary 3.5.6
+Take $x=\sum_{i=1}^na_i\omega_iP_i$ show that for all $i, x\equiv_{n_i}a_i$.
+\\\\
+For all $i$ we have  $a_i\omega_iP_i\equiv_{n_i} a_i$ and for $j\neq i,n_j|P_i$ so $a_i\omega P_i\equiv_{n_j}0$. Hence for all $i$, $a_i\omega_{i}P_i+\sum_{j\neq i}a_j\omega_jP_j=x\equiv_{n_i} a_i$.
+\\
+\item Refer to a result in Problem set 2 that shows that if for all $i$ ,$x\equiv_{n_i}a_i$ and $y\equiv_{n_i} a_i$ then $x\equiv_P y$
+\\\\
+Suppose that for all $i$ we have $x\equiv_{n_i}a_i$ and $y\equiv_{n_i} a_i$. Then for all $i, x-y\equiv_{n_i}0$. That is for all $i$ we have $n_i|(x-y)$. Since the $n_i$ are pairwise relatively prime, by Problem set 2 Problem 2d $P|(x-y)$.
 
 \eenu
+
+
+
+\newpage %q4
+
+\item
+\begin{enumerate}
+\item Prove {\bfseries Unit Bijection}
+\item Prove {\bfseries Multiplicativity of the Totient}
+\item Why is the calculation of $\varphi(p^n)$ correct
+\item Prove BB Corollary 3.5.6
+
 \end{enumerate}
-\section{The Structure of Groups of Units}
 
-\begin{center}An Example \end{center}
-We have $Z_7^\ast=\{1,2,3,4,5,6\}$. We make the following following table
+\newpage %q5
 
-\begin{comment}
+\item
 \begin{align*}
 \text{element} & \text{powers} & \text{order}\\
 \hline
@@ -445,7 +250,7 @@ We have $Z_7^\ast=\{1,2,3,4,5,6\}$. We make the following following table
 \hline
 6 & \{1,6\} & 2
 \end{align*}
-\end{comment}
+
 \begin{equation*}
 \begin{array}{c|c|c}
 \text{element} & \text{powers} & \text{order}
@@ -471,34 +276,23 @@ We have $Z_7^\ast=\{1,2,3,4,5,6\}$. We make the following following table
 \end{equation*}
 
 
-\begin{enumerate}[resume=p]
-\itep
+\newpage %q6
+
+\item
 \benu
 \item What is the set $Z_{18}^*$
 \item Make a table like that above for $Z_{18}^*$
 \item What are the generators of $Z_{18}^*$
 \eenu
-\itep
-\benu
+
+\newpage %q6
+
+\item
+\begin{enumerate}
 \item What is the set $Z_{12}^*$
 \item Make a table like that above for $Z_{12}^*$. Notice that $Z_{12}^*$ does not have generators.
-\eenu
 \end{enumerate}
-\bet There is a generator in $\mbZ_n^*$ if and only if $n=2,4$, $n=p^k$ for some odd prime $p$ or $n=2p^k$ for some odd prime p.
-\et
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{enumerate}
 \end{document}
