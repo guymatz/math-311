@@ -10,14 +10,16 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{tabularx}
-\usepackage{arydshln,leftidx,mathtools}
+%\usepackage{arydshln}
+\usepackage{leftidx}
+\usepackage{mathtools}
 \usepackage{bm}
 \usepackage{tikz-cd}
 \usepackage{hyperref}
 \usepackage{bm}
 
-\setlength{\dashlinedash}{.4pt}
-\setlength{\dashlinegap}{.8pt}
+%\setlength{\dashlinedash}{.4pt}
+%\setlength{\dashlinegap}{.8pt}
 %\usepackage{amsthm}
 \usepackage{verbatim}
 %\usepackage{commath}
@@ -246,10 +248,12 @@ This we have the following diagram:
 Suppose we have $H\leq G\leq \mb{Z}$. If $a\sim_H b$ then $a-b\in H$ and so $a-b\in G$ thus we get a map $\pi_{H,G}\colon \mbZ/H\to Z/H$. If $m|n$ then $n\mbZ\leq mZ$ and so we have a map $\pi_{m,n}\colon \mbZ/m \mbZ\to \mbZ/n \mbZ$.
 This we have the following diagram:
 
+\begin{comment}
 \begin{tikzcd}
 \mbZ/m \mbZ \arrow[r,rightarrow,"\overline{r_m}"]  \arrow[d,"\pi_{m,n}"] & Z_m \arrow[d,"r_{m,n}"]\\
 \mbZ/n \mbZ\arrow[r,rightarrow,"\overline{r_n}"] &Z_n
 \end{tikzcd}
+\end{comment}
 
  and
 the maps $\overline{r_m}$ and $\overline{r_n}$ are bijections
