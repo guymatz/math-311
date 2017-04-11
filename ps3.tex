@@ -215,7 +215,12 @@ The table for multiplication
 
 \newpage %q2
 \item Find all of the solutions to $567x\equiv 238 \mod 665$. Check your results.
-
+\\
+Since $(567, 665) = (238, 665) = 7$ we have a solution.  Solve $567y = 0$.  We have $\tfrac{665}{7} = 95$, so solutions to the homogeneous equation $567y = 0$ in $Z_{665}$ are:
+$$\{95i : 0 \leq i < 7\} \} = \{0, 95, 190, 285, 380, 475, 570\}$$
+\\
+To solve for the inhomogeneous equation, we have $\tfrac{567}{7} = 81, \tfrac{665}{7} = 95$, and $\tfrac{238}{7} = 34$.  We now wish to solve $34y = 81$ in $Z_{95}$.  We compute ExtendedGCD[34, 95] and get \{1, \{14, -5\}\}, so in $Z_{95}$ we have $34^{-1} = 14$ and a solution to $34y = 81$ in $Z_{95}$ is Mod[14*81, 95] = 89.  Thus the solutions to the inhomogenous equation $567x = 238$ in $Z_{665}$ are:
+$$\{89 + 95i : 0 \leq i \leq 6 \} = \{89, 184, 279, 374, 469, 564, 659\}$$
 \newpage %q3
 
 
@@ -239,8 +244,7 @@ Suppose that for all $i$ we have $x\equiv_{n_i}a_i$ and $y\equiv_{n_i} a_i$. The
 \eenu
 
 \newpage %q4
-\item 
-Take
+\item Using Mathematica to get a multi-modulus CRT solution
 \begin{align*}
 n_1=105,&a_1=27\\
 n_2=121,&a_2=35,\\
@@ -255,9 +259,115 @@ s &\equiv_{121}35\\
 s &\equiv_{64} 14\\
 s&\equiv_{169}82
 \end{align*}
-\\
-Show me the steps. You should get $107223822$.
 
+\begin{verbatim}
+In[5]:= n1 = 105; a1 = 27; n2 = 121; a2 = 35; n3 = 64; a3 = 14; n4 = \
+169; a4 = 82
+
+Out[5]= 82
+
+In[45]:= GCD[n1, n2]
+
+Out[45]= 1
+
+In[46]:= GCD[n1, n3]
+
+Out[46]= 1
+
+In[50]:= GCD[n1, n4]
+
+Out[50]= 1
+
+In[51]:= GCD[n2, n3]
+
+Out[51]= 1
+
+In[52]:= GCD[n2, n4]
+
+Out[52]= 1
+
+In[53]:= GCD[n3, n4]
+
+Out[53]= 1
+
+In[12]:= P = n1 * n2 * n3 * n4
+
+Out[12]= 137417280
+
+In[17]:= P1 = n2 * n3 * n4
+
+Out[17]= 1308736
+
+In[18]:= P2 = n1 * n3 * n4
+
+Out[18]= 1135680
+
+In[19]:= P3 = n1 * n2 * n4
+
+Out[19]= 2147145
+
+12705
+
+In[20]:= P4 = n1 * n2 * n3
+
+Out[20]= 813120
+
+In[22]:= e1 = ExtendedGCD[ n1, P1]
+
+Out[22]= {1, {-573351, 46}}
+
+In[23]:= e2 = ExtendedGCD[n2, P2]
+
+Out[23]= {1, {131401, -14}}
+
+In[24]:= e3 = ExtendedGCD[n3, P3]
+
+Out[24]= {1, {234844, -7}}
+
+In[25]:= e4 = ExtendedGCD[n4, P4]
+
+Out[25]= {1, {173209, -36}}
+
+In[26]:= S1 = a1 * e1[[2]][[2]] * P1
+
+Out[26]= 1625450112
+
+In[27]:= S2 = a2 * e2[[2]][[2]] * P2
+
+Out[27]= -556483200
+
+In[30]:= S3 = a3 * e3[[2]][[2]] * P3
+
+Out[30]= -210420210
+
+In[31]:= S4 = a4 * e4[[2]][[2]] * P4
+
+Out[31]= -2400330240
+
+In[32]:= S = S1 + S2 + S3 + S4
+
+Out[32]= -1541783538
+
+In[38]:= M = Mod[S, P]
+
+Out[38]= 107223822
+
+In[39]:= Mod[M, n1]
+
+Out[39]= 27
+
+In[40]:= Mod[M, n2]
+
+Out[40]= 35
+
+In[41]:= Mod[M, n3]
+
+Out[41]= 14
+
+In[42]:= Mod[M, n4]
+
+Out[42]= 82
+\end{verbatim}
 
 
 \newpage %q5
