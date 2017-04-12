@@ -219,7 +219,7 @@ The table for multiplication
 Since $(567, 665) = (238, 665) = 7$ we have a solution.  Solve $567y = 0$.  We have $\tfrac{665}{7} = 95$, so solutions to the homogeneous equation $567y = 0$ in $Z_{665}$ are:
 $$\{95i : 0 \leq i < 7\} \} = \{0, 95, 190, 285, 380, 475, 570\}$$
 \\
-To solve for the inhomogeneous equation, we have $\tfrac{567}{7} = 81, \tfrac{665}{7} = 95$, and $\tfrac{238}{7} = 34$.  We now wish to solve $34y = 81$ in $Z_{95}$.  We compute ExtendedGCD[34, 95] and get \{1, \{14, -5\}\}, so in $Z_{95}$ we have $34^{-1} = 14$ and a solution to $34y = 81$ in $Z_{95}$ is Mod[14*81, 95] = 89.  Thus the solutions to the inhomogenous equation $567x = 238$ in $Z_{665}$ are:
+To solve for the inhomogeneous equation, we have $\tfrac{567}{7} = 81, \tfrac{665}{7} = 95$, and $\tfrac{238}{7} = 34$.  We now wish to solve $81y = 34$ in $Z_{95}$.  We compute ExtendedGCD[81, 95] and get \{1, \{-34, 29\}\}, so in $Z_{95}$ we have $81^{-1} = -34$ and a solution to $34y = 81$ in $Z_{95}$ is Mod[14*81, 95] = 89.  Thus the solutions to the inhomogenous equation $567x = 238$ in $Z_{665}$ are:
 $$\{89 + 95i : 0 \leq i \leq 6 \} = \{89, 184, 279, 374, 469, 564, 659\}$$
 \newpage %q3
 
