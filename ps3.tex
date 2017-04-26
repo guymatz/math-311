@@ -380,9 +380,26 @@ Out[42]= 82
 \item 
 \begin{enumerate}
 \item Prove {\bfseries Unit Bijection}
+\\
 \item Prove {\bfseries Multiplicativity of the Totient}
+\\
 \item Why is the calculation of $\varphi(p^n)$ correct
-\item Prove BB Corollary 3.5.6
+\\
+\item Prove BB Corollary 3.5.6 - Let $n$ be a positive integer which has the prime decomposition $n = p^{\alpha_1}_1p^{\alpha_2}_2 \dots p^{\alpha_m}_m$ where $p_1 < p_2 < \dots < p_m$.  Then
+$$ \varphi(n) = n(1 - \tfrac{1}{p_1})(1 - \tfrac{1}{p_2}) \dots (1 - \tfrac{1}{p_m}).$$
+\\
+We need to count the generators of $\bold{Z}_n$.  To do so, we will use the following  isomorphism from BB 3.5.5:\\
+$$\bold{Z}_{p^{\alpha_1}_1} \times \bold{Z}_{p^{\alpha_2}_2} \times \dots \times \bold{Z}_{p^{\alpha_m}_m} \cong \bold{Z}_n$$\\
+Since an element of this product has order $n$ if and only if it is a generator, we have that the least common multiple of the order of its components in their respective groups must be $n$.  
+\\
+REWRITE FROM HERE . . .
+\\
+If $b = ([b_1]_{p^{\alpha_1}_1}), [b_2]_{p^{\alpha_2}_2}, \dots ,[b_m]_{p^{\alpha_m}_m})$ is an element of the direct product, then the order of each $[b_i]_{p^{\alpha_i}_i}$ must be a divisor of $p^{\alpha_i}_i$, say ${p^{\alpha_i}_\beta}$, with $\beta_i \leq \alpha_i$.  Then $b$ has order ${p^{\beta_1}_1} {p^{\beta_2}_2} \dots {p^{\beta_m}_m}$, and for this order to be equal to $n$ we must have $\beta_i = \alpha_i$ for each $i$.  It follows that an element of the direct product is a generator if and only if each of its components is a generator in its respective cyclic group of primepower order.  Thus the totoal number of possible generators is equal to the product of the number of generators in each component.  We have reduced the problem to counting the number of generators in $\bold{Z}_{p^\alpha}$, for any prime $p$.  The elemtns that are not generators are the multiples of $p$, and among the $p^\alpha$ elements of $\bold{Z}_{p^\alpha}$ there are $p^{\alpha-1}$ such multiples.  Thus
+$$ \varphi(p^{\alpha}) = p^{\alpha} - p^{\alpha - 1} = p^{\alpha}(1 - \tfrac{1}{p})$$
+\\
+Taking the product of these values for each of the primes in the decomposition of $n$ gives the formula we want.
+\\
+$\square$
 \end{enumerate}
 
 \newpage %q6
@@ -454,7 +471,7 @@ $$\{1,5,7,11,13,17\}$$
 
 \item What are the generators of $Z_{18}^*$
 \\
-The generators of $Z_{18}^*$ are 1, 5, 7, 11, 13 and 17.
+The generators of $Z_{18}^*$ are 5 and 11.
 \eenu
 
 \newpage %q7
@@ -486,7 +503,7 @@ $$\{1,5,7,11\}$$
 5 & \{1, 5\} & 2
 \\
 \hline
-6 & \{1, 6, 0\} & 3
+6 & \{1, 6\} & 2
 \\
 \hline
 7 & \{1, 7\} & 2
