@@ -14,7 +14,7 @@ for e in range(1,z):
     for n in range(0,z):
         p = e**n
         element = str(p % z)
-        if element not in powers:
+        if element not in powers and int(element) > 0:
             powers.append(element)
     print("\\\\")
     print("\\hline")
