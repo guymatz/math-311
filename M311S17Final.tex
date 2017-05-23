@@ -133,14 +133,22 @@
 
 %To turn the answer into problem sets use replace to replace \begin{comment} with \begin{comment} and \\end{comment}  by \end{comment}.
 \newcommand{\lieb}[3][{{}}]{\frac{d^#1 #2}{d\,#3^#1}}
+
+\title{\textbf{Math 311 - Final}}
+\author{Guy Matz}
+\date{\today}
+
 \begin{document} 
-\begin{center} M311 \& 621 Final Exam \end{center}
-In this problem set there are exercises and problems. Read the entire problem set first. Some later problems follow immediately from earlier problems or exercises and you may want to try those problems first by just referring to the earlier results. Much of this is a redevelopment of the exposition of BB so be sure you don't quote a result from BB when it is exactly what you are being asked to prove.
-For the exercises you should at least be able to see the idea of how to prove them but you don't need to write down the answers. You may however need to refer to an exercise to do a problem that comes after it. There are 17 problems, each worth 7 points ,which I want you to hand in.  As usual hand in the problems problems, and their parts  in the order given. Don't spend more than 30 minutes on a problem. Even if you can't do, or skip a problem or one of it's parts, you may quote its result to do a later problem. 
-\section{Three Easy Pieces}
+
+%\maketitle
+%\newpage % Q1
+
 \begin{enumerate}[series=p]
 \itep 
 \label{drp}Let $m>1$ and suppose that $m=ab=a'b'$ with $a,b,a'$ and $b'$ greater than $0$ and $(a,b')=(a',b)=1$. Show that  $a=a'$ and $b=b'$
+
+\newpage
+
 \itep
 Let $G,\ast$ be a group and $S,\circ$ be binary structure. Suppose $\psi\colon G\to S$ is a surjective homomorphism, that is $\psi(a\ast b)=\psi(a)\circ\psi(b)$
 \benu
@@ -148,9 +156,11 @@ Let $G,\ast$ be a group and $S,\circ$ be binary structure. Suppose $\psi\colon G
 \item Let $K=\psi^{-1}(\psi(e_G))$. Show that $K\leq G$
 \eenu
 \end{enumerate}
-Reread BB Example 3.6.1 through Example 3.6.5
+
+\newpage
+
 \begin{enumerate}[resume=p]
-\itep \label{D4comp} Use BB Table 6.3.1 to do the computations.
+\itep \label{D4comp} Use BB Table 3.6.1 to do the computations.
 \benu
 \item (Double Transpositions) \label{dt} In $A_4$ we have the set $T_4=\{Id,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}$. Complete the following table:
 
@@ -182,80 +192,18 @@ Reread BB Example 3.6.1 through Example 3.6.5
 
 \eenu
 \end{enumerate}
-\bo Observe that since conjugation preserves the form of cycle decompositions we have for all $\omega\in S_4$ and $\gamma\in T_4$, $\omega\gamma\omega^{-1}\in T_4$.
-\eo
 
+\newpage
 
-\section{Set Multiplication}
-
-\bdf Given a group $G,S\subseteq G$ and $T\subseteq G$ the set product of $S$ by $T$ is $\{st:s\in S \text{ and }t\in T\}$. We denote this 
-product  by $ST$. In the case that one of the sets is a singleton $\{g\}$ we abuse notation and denote $\{g\}T$ by $gT$. and $S\{g\}$ by $Sg$. 
-\edf
-With this notation we have 
-\[\bigcup_{s\in S}sT=ST=\bigcup_{t\in T}St
-\]
-\bax Problem \ref{D4comp} part 2 shows that in $S_4$ we have $\gen{(1,3)}T_4=D_4$
-\ax
-\bex \label{associativity} Show that set multiplication is associative, that is $(AB)C=A(BC)$
-\ex
-
-\bnot Let $T\subseteq G$ we denote $\{t^{-1}:t\in T\}$ by $T^{-1}$.
-\enot
-
-\bex \hfill
-\benu
-\item \label{invinv} 
-Show that $(T^{-1})^{-1}=T$
-\item Show that $(ST)^{-1}=T^{-1}S^{-1}$.
-\eenu
-\ex
-
-
-
-
-
-
-\subsection{Set Multiplication and Subgroups}
-
-
-
-\bex
- The definition of $H\leq G$ can be rephrased as
-$H$ is a subgroup of $G$ if and only if the following three conditions hold
-\bed
-\item[Closure] We have $HH\subseteq H$
-\item[Identity] We have $e\in H$
-\item[Inverses] We have $H^{-1}\subseteq H$
-\ed
-\ex
-\bex \hfill
-\benu
-\item If we have Closure and and Identity then $HH=H$.
-\item If we have Inverses then $H^{-1}=H$
-\item BB. Corollary 3.2.3 states that for $H\neq \phi$, $H\leq G$ if and only if $HH^{-1}\subseteq H$.
-\eenu
-\ex
-
-
-
-
-
-\section{Normal Subgroups}
-
-\bdf A subgroup $H\leq G$ is normal if for all $g\in G$, $gHg^{-1}\subseteq H$. If $H\leq G$ is normal in $G$ we denote this by $H\unlhd G$. If $H$ is a proper normal subgroup of $G$ we write $H\lhd G$
-\edf
-\bax Every subgroup of an abelian group is normal.
-\ax
-\bax Problem \ref{D4comp} and the observation after it shows that $T_4\lhd S_4$.
-\ax
 \begin{enumerate}[resume=p]
 \itep  Show that if $H\unlhd G$ then for all $g\in G, gHg^{-1}=H$.
 \beans
-Suppose that $H\unlhd G$ and $g\in G$ then $gHg^{-1}\subseteq H$. Then 
-
-$H=g^{-1}(gHg^{-1})g\subseteq g^{-1}Hg$. Taking $k=g^{-1}$ we have for all $k\in G, H\subseteq kHk^{-1}$. Thus for all $g\in G,gHg^{-1}=g$
+Suppose that $H\unlhd G$ and $g\in G$ then $gHg^{-1}\subseteq H$. Then $H=g^{-1}(gHg^{-1})g\subseteq g^{-1}Hg$. Taking $k=g^{-1}$ we have for all $k\in G, H\subseteq kHk^{-1}$. Thus for all $g\in G,gHg^{-1}=g$
 
 \eans
+
+\newpage
+
 \itep 
 \benu
 \item Let $H\leq G$. Show that if for all $g\in G$, $gH=Hg$ then $H\unlhd G$
@@ -270,18 +218,8 @@ Assume $H\unlhd G$ then for any $g\in G$ we have $g^{-1}Hg=H$. Hence
 \eenu
 \end{enumerate}
 
+\newpage
 
-\bax Let $X$ be any set (finite or non-finite) and $\Sym_{co}(X)$ be the set of permutations $\omega$ such that $\{x:\omega(x)\neq x\}$ is a finite set. In the first problem set you proved $\Sym_{co}(X)$ is a subgroup of $\Sym(X)$ and that for all $\gamma\in \Sym(X)$ and $\omega\in \Sym_{ co}(X),\gamma\circ \omega\circ \gamma^{-1}\in \Sym_{f}(X)$ that is $\Sym_{co}(X)\unlhd \Sym(X)$.
-\ax
-
-\bax ( BB Proposition  3.7.4) If $\phi\colon G\to K$ is a homomorphism then $\ker(\phi)\unlhd G$
-\ax 
-
-Recall BB that for $S$ a set and $\Gamma$ a partition of $S$ we have the  projection $\pi_\Gamma\colon S\to \Gamma,\pi_\Gamma(s)=[s]_\Gamma$. By construction $\pi_\Gamma$ is surjective.
-
-
-\bdf[Multiplicative Partition] Let $G$ be group and $\Phi$ be a partition of $G$, we say that $\Phi$ is multiplicative if for $A,B\in \Phi,AB\in\Phi$. Equivalently set multiplication is a binary structure on $\Gamma$.
-\edf
 \begin{enumerate}[resume=p]
 \itep \label{mp} Let $\Phi$ be a multiplicative partition of $G$. For the rest of this problem we will assume the partition is $\Phi$ and we will denote its cells by $[g]$ rather than $[g]_\Phi$. 
 \benu 
@@ -291,8 +229,9 @@ Recall BB that for $S$ a set and $\Gamma$ a partition of $S$ we have the  projec
 \item What result above shows that $[e]\unlhd G$
 \eenu
 \end{enumerate}
-Reread BB Lemma 3.2.9 and Theorem 3.2.10.  Also reread  3.8.1. Let $H\leq G$. We will use the equivalence relation $a\sim_L b$ if $a^{-1}b\in H$ then the cells of this equivalence relation is the partition $\{gH:g\in G\}$ we denote this partition by $G/H$. the proof of la Grange's theorem shows that when $G$ is finite.
-\[|G|=|H||G/H|\]
+
+\newpage
+
 \begin{enumerate}[resume=p]
 \itep 
 \benu
@@ -303,54 +242,29 @@ Assume  $H\unlhd G$. Consider $g_0H,g_1H\in G/H$. We have $g_1Hg_1^{-1}=H$. Thus
 \[g_0Hg_1H=g_0(g_1Hg_1^{-1})g_1H=g_0g_1HeH=g_0g_1HH=g_0g_1H\in G/H
 \]
 \eans
-\item Let $\Phi$ be a multiplicative partition of $G$. Show that $\Phi=G/[e]$. Hint: $G/[e]$ is the cells of the equivalence relation $a\sim_{[e]} b$ if $a^{-1}b\in [e]$. By definition $\Phi$ is the cells of the equivalence relation $\pi_\Phi$. Use Problem \ref{mp} to show these equivalence relations are the same.
+\item Let $\Phi$ be a multiplicative partition of $G$. Show that $\Phi=G/[e]$. Hint: $G/[e]$ is the cells of the equivalence relation $a\sim_{[e]} b$ if $a^{-1}b\in [e]$. By definition $\Phi$ is the cells of the equivalence relation $\pi_\Phi$. Use Problem 6 to show these equivalence relations are the same.
 \eenu
 \end{enumerate}
-Let $H\leq G$. This sequence of Problems shows that  conditions:
 
-\bed
-\item[Normality] For all $g\in G,gHg^{-1}=H$.
-\item[Left Coset is Right Coset] For all $g\in G,gH=Hg$
-\item[Multiplicative Partition] The partition $\{gH:g\in G\}$ is multiplicative (and hence a group).
-\item[$e$-Cell] There is a multiplicative partition $\Phi$ of $G$ with $H=[e]_\Phi$.
-\item[Kernel] There exists a homomorphism $\phi\colon G\to K$ with $H=\ker(\phi)$
-\ed
+\newpage
 
-are all equivalent
-\bax BB Example 3.8.8 Let $H$ be of index 2 in $G$. That is for $g\notin H$ we have $G/H=\{G,gG\}$ then $gG=G-H=Gg$ hence $H\lhd G$. 
-\ax
+
 \begin{enumerate}[resume=p]
 \itep Let $n>2$. Give an example of a group $G$ with a subgroup $H$ of index $n$ such that $H$ is not normal in $G$. You must prove that in your example $H$ is not a  normal subgroup, that is you must give subgroup of $H$ of $G$ and an element in $G$ such that $gHg^{-1}$ is not a subset of $H$. Hint: Consider $S_n$ the subset $\{\omega\in S_n:\omega(n)=n\}$ and the transposition $(1,n)$.
 
 \end{enumerate}
 
+\newpage
 
-\bax \hfill
-\benu
-\item BB Theorem 2.3.11  allows us to define the subgroup $A_n$ of even permutations. We have $[S_n:A_n]=2$ so $A_n\lhd  S_n$. 
-
-\item BB example 3.7.8 gives more conceptual proof that $A_4$ is well defined and normal in $S_4$. We  have the sign homomorphism $\sgn\colon S_n\to \{-1,1\}\leq \mbQ^*$, and we have that $\sgn^{-1}(1)\leq S_n$. (BB denotes this homomorphism by $\phi$ but the standard notation is $\sgn$). This shows that every permutation is odd or even but not both and that $\sgn^{-1}(1)=A_n$ so $A_n\lhd S_n$
-\eenu
-\ax
- A proof critique: The proof of BB Theorem 2.3.11 is not very conceptual but it uses nothing more than definition of permutation and transposition . BB Example 3.7.8,  which depends on Definition 3.6.5 and Theorem 3.6.6, while more conceptual needs  all of the mathematical machinery of polynomials. Furthermore in the second paragraph of BB Definition 3.6.5 the phrase ``Any permutation $\sigma\in S_n$ acts on $\Delta_n$ by \ldots'' depends on the meaning of ``acts'' which we will see later requires quite a lot of machinery to make precise. It is a general apothegm in mathematical style that one should get results with the fewest possible prior results and definitions. On the other hand it is also desirable that a proof have a conceptual basis.
-
-
-
-
-
-
-
-\bdf[Normalizer] Let $H\leq G$ the {\em normalizer} of $H$ is $\{g\in G:gHg^{-1}=H\}$\edf
-\bo $H$ is normal in $G$ if and only if $N[H]=G$.
-\eo 
 \begin{enumerate}[resume=p]
 \itep Show that $N[H]$ is a subgroup of $G$.
 \beans Take $a, b\in N[H]$. We have 
 \[(ab^{-1})H(ab^{-1})^{-1}=a(b^{-1}Hb)a^{-1}=aHa^{-1}=H\]
 \eans
 \end{enumerate}
-\bo We have that $H\unlhd N[H]$ and if $H\unlhd L\leq G$ then $L\leq N[H]$. 
-\eo
+
+\newpage
+
 \begin{enumerate}[resume=p]
 \itep 
 \benu  
@@ -367,43 +281,25 @@ By the equality of left and right cosets, that is for $a\in N[H],aH=Ha$ we have
 \]
 \eans
 \item\label{quotiso} Let $H\lhd G$ and $K\leq G$ such that $K\cap H=\phi$ and $KH=G$. As in BB 3.7.7 we have the natural map $\pi_H\colon G\to G/H$ show that $\pi|_K\colon K\to G/H$ is an isomorphism.
-\item \label{count} Let$G$ be a finite group, $H\unlhd K,K\leq N[H]$ and $H\cap K=G$. Show that $|HK|=|H||K|$
+\item \label{count} Let $G$ be a finite group, $H\unlhd K,K\leq N[H]$ and $H\cap K=G$. Show that $|HK|=|H||K|$
 \eenu
 \end{enumerate}
-\section{Structure of $S_4$}
-From Example \ref{dt} we have $\{\Id,(1,2)(3,4),(1,3)(2,4),(1,4)(2,3)\}=T_4\lhd S_4$. Within $S_4$ we have $K=\{\omega\in S_4:\omega(4)=4\}$. The extension map $\epsilon\colon S_3\to K,\ep(\gamma)(i)=\gamma(i)$ for $i\in \un{3}$, $\epsilon(\gamma)(4)=4$ is an isomorphism from $S_3\to K$. Clearly $K\cap T_4=\{\Id\}$. 
+
+\newpage
+
 \begin{enumerate}[resume=p]
 \itep
 \benu
 \item Show that $KT_4=S_4$. (Just count sizes).
-\item We have $\gen{(1,2,3)}T_4\leq A_4$. Use counting  to show that $\gen{(1,2,3}\}T_4=A_4$.
+\item We have $\gen{(1,2,3)}T_4\leq A_4$. Use counting  to show that $\gen{(1,2,3)}T_4=A_4$.
 
 
 \item We have $T_4\lhd D_4, \gen{(1,3)}<D_4$ and $\gen{(1,3)}\}\cap T_4=\{\Id\}$. Use counting to show that $\gen{(1,3)}T_4=D_4$.
 \eenu
 \end{enumerate}
 
+\newpage
 
-\begin{comment}
-
-Read BB 7.6 through proposition 7.6.2 about solvable groups. 
-\bed
-\item[$S_2$]We have $S_2$ is obviously solvable. 
-\item[$S_3$] We have $<e>\unlhd<(1,2,3)>\unlhd S_3$ makes $S_3$ solvable.
-\item[ $S_4$ ] We have 
-\[\gen{e}\unlhd\gen{(1,2)(3,4)} \lhd T_4\lhd A_4\lhd S_4
-\]
-makes  $S_4$ solvable.
-\item[$S_n$] BB Theorem 7.7.2 shows that for $n\geq5$,$S_n$ is not solvable.
-\ed
-
-In one of the next courses after this course, {\em Galois Theory},Hunter's M722, we will see that solvability is very closely related to the solution of polynomials in radicals. The quadratic formula gives expressions for the roots of a quadratic polynomial in terms of its coefficients and radicals. The solvability of $S_3$ and $S_4$ gives analogs (solutions using just radicals and coefficients) to the quadratic formula for the general cubic and the general quadratic polynomials. That $S_5$ is not solvable for $n=5$ will lead to a proof that there is no analog to the quadratic formula for the general polynomial of degree greater than or equal to 5.
-\end{comment}
-\section{Products)}.
-
-Read BB Definition 3.3.3 and Proposition 3.4.4.
-
-Let $H_d$ and $K_d$ be groups and and take $G_d=H_0\times K_0$. The group $G_d$ is called the {\em external } of direct product $H_d$ and $K_d$. Within $G_d$ we have the subgroups $H_d=H_0\times\{e_{K_0}\}$ and $K_d=\{e_{H_0}\}\times K_0$. Let $\phi\colon G_d\to G$ be an isomorphism and take $H=\phi(H_d)$ and $K=\phi(K_d)$.
 \begin{enumerate}[resume=p]
 \itep (External Direct Product)
 \benu
@@ -413,8 +309,8 @@ Let $H_d$ and $K_d$ be groups and and take $G_d=H_0\times K_0$. The group $G_d$ 
 \item Show that $HK=G$
 \eenu
 \end{enumerate}
-\bnot[Commutator] Let $G$ be a group and $a,b$ elements and denote $aba^{1}b^{-1}$ by $[a,b]$. We have $[a,b]=e$ if and only if $ab=ba$
-\enot
+
+\newpage
 
 \begin{enumerate}[resume=p]
 \itep (Internal Direct Product)Let $H\leq G$,$K\leq G$. We have the map $\phi\colon H\times K\to G,\phi((h.k))=hk$. It is usually not a homomorphism
@@ -423,56 +319,20 @@ Let $H_d$ and $K_d$ be groups and and take $G_d=H_0\times K_0$. The group $G_d$ 
 \item Also assume that $H\unlhd G$ and $K\unlhd G$ show that $\phi$ is a homomorphism. Hint: Look at the commutator $[h,k]$ for $h\in H$ and $k\in K$.
 \eenu
 \end{enumerate}
-If we also assume that $HK=G$ then $\phi$ will be an isomorphism.
-\section{Structure of Finite Abelian Groups}
-In this section we are going to get a structure theorem for Finite Abelian Groups.
 
-\subsubsection{Preliminaries}
+\newpage
 
-From previous work, particularly the discussion surrounding BB Theorem 3.2.10 and BB Th 3.8.9 we have make several observations.
-\bo \label{countfin} Let $G$ be a finite group
-\benu 
-\item Let $\phi\colon G\to G_C$ then $|G|=|\ker(\psi)||\im(\psi)|$.
-\item \label{powerful} Let $\phi(x)=y$ then $o(y)|o(x)$
-\eenu
-\eo
 
-\bdf Let $p$ be a prime a finite group with $|G|=p^i$ is called a p-group.
-\edf
-\bo By la Grange's theorem we have that if $G$ is a p-group then then every element in G has order a power of $p$.
-\eo
+\begin{enumerate}[resume=p]
+\itep Assuming The Theorem below, prove the Corollary
 \bet[Cauchy] \label{ct} Let $G$ be a finite group and $p$ be a prime such that $p$ divides the order of $G$ then $G$ has an element of order $p$.
 \et
 \bec \label{corpgroup} Let $G$ be a finite group and suppose the order of any element of $G$ is a power of $p$, then $G$ is a $p$-group
 \ec
-\begin{enumerate}[resume=p]
-\itep. Assuming Theorem \ref{ct} prove Corollary \ref{corpgroup}
 \end{enumerate} 
 
-The following is a lemma that will be used in the proof of Cauchy's theorem for general finite groups
-\bel \label{cauchyabelian} Let $G$ be a finite {\em abelian} group and $p$ be a prime such that $p$ divides the order of $G$ then $G$ has an element of order $p$.
-\el
-\begin{enumerate}
-\itep Prove Lemma \ref{cauchyabelian}. Hint. Choose $g\in G$ if $p|o(g)$ show we are done. Otherwise show $p$ divides the order of $G/\gen{g}$. Now use strong induction and Observation \ref{countfin} part \ref{powerful}.
-\end{enumerate}
+\newpage
 
-\subsection{Structure Theorem for Finite Abelian Groups}
-\bet[Structure Theorem for  Finite Abelian Groups] \label{structabelian} \hfill
-\benu
-\item \label{primedecomp} Let $G$ be an finite abelian group, $p_1<p_2<p_k$ be primes, and $|G|=p_1^{n_1}p_2^{n_2}\dots p_k^{n_k}$ then $G$ is isomorphic to product $G(p_1)\times G(p_2)\times \dots G(p_n)$ where for each $i$, $G(p_i)$ is a p-group of order $p_i^{n_i}$
-\item \label{pt2} Let $H$ be a finite abelian $p$-group of order $p^m$ then $H$ is isomorphic to a product 
-\[ Z_{p_1^{m_1}}\times Z_{p^{m_2}}\dots Z_{p^{m_l}}\]
-Where $m_1+m_2+\dots m_l=m$
-\eenu
-\et
-
-
-\bnot Let $G$ be an abelian group then for any whole number $m$ we have a homomorphism $\rho_m \colon G\to G,\rho(g)=g^m$. Notice that in order for this map to be a homomorphism we must have $a^mb^m=(ab)^m$ which is why the condition that $G$ be abelian is necessary.
-\enot
-
-
-\bnot  We set $I_m\im{\rho_m}$ and $K_m=\ker{\rho_m}$.
-\enot
 \begin{enumerate}[resume=p]
 \itep \label{startdecomp} Let $|G|=mn$ 
 \benu
@@ -489,35 +349,29 @@ Where $m_1+m_2+\dots m_l=m$
 
 \end{enumerate}
 
-Now take $G$ an finite abelian group, and $p$ be prime,$|G|=p^nm$ and $p$ does not divide $m$. By Problem \ref{startdecomp} we have the isomorphism $p:K_{p^n}\times K_m\to G$
+\newpage
+
 \begin{enumerate}[resume=p]
 \itep
 \benu
 \item Prove that $K_{p^n}$ is a $p$ group.
-\item Use Problem \ref{drp} to prove that $|K_{p^n}|=p^n$ and $|K_m|=m$.
-\item Use induction on $k$ to prove Theorem \ref{structabelian} part \ref{primedecomp}. 
+\item Use Problem 1 to prove that $|K_{p^n}|=p^n$ and $|K_m|=m$.
+\item Use induction on $k$ to prove Part I of the Structure Theorem for Finite Abelian Groups:
+\\\\ Let $G$ be an finite abelian group, $p_1<p_2<p_k$ be primes, and $|G|=p_1^{n_1}p_2^{n_2}\dots p_k^{n_k}$ then $G$ is isomorphic to product $G(p_1)\times G(p_2)\times \dots G(p_n)$ where for each $i$, $G(p_i)$ is a p-group of order $p_i^{n_i}$
+
 \eenu
 \end{enumerate}
-Reread the paragraph immediately following BB Definition 3.1.9
 
- I have posted a paper {\em Adkins Finite Groups} skip down to Lemmas 14 and 15 in that paper. In this paper since the groups in question are abelian additive notation,as after BB Definition 3.1.9, is being used. That is the product is written $g_1+g_2$ rather than $g_1g_2$ and $g^m$ is written $mg$. Be sure you understand the proofs of those two lemmas.
+
+\newpage
 
 \begin{enumerate}[resume=p]
-\itep Quoting Lemma 15 of the paper, prove Theorem \ref{structabelian} part \ref{pt2}
+\itep Quoting Lemma 15 of the paper {\em Adkins Finite Groups} (below), prove Theorem \ref{structabelian} part \ref{pt2} (below)
+\\\\
+\textbf{Lemma:} Let $G$ be a finite abelian p-group, and let $H$ be a cyclic subgroup of maximal order.  Then there is a subgroup $K$ of $G$ such that $G$ is the internal direct product of $H$ and $K$ 
+\\\\
+\textbf{Theorem:} ??$ 
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
