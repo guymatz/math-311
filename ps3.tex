@@ -381,23 +381,23 @@ Out[42]= 82
 \begin{enumerate}
 \item Prove {\bfseries Unit Bijection}
 \\
+
+	Consider the function $R\colon Z_P^*\to \mc{P}*$ where $R(a)$ is defined to be $(a_1,a_2...,a_k)$ where $a_i$ is $a$ modulo $n_i$ or alternatively $a_i \equiv_{n_i} a$ and $0 \leq a_i < a$.
+	First we show that if $a$ is a unit than $R(a)$ is a unit. Since $a$ is a unit it has an inverse $a^{-1}$. Consider $R(a)\cdot R(a^{-1})$. Each of the entries in this product is $a*a^{-1}=1$ modulo some $n_i$, so it is a unit. 
+	The inverse of this function, $R^{-1}$, can be defined as follows $R^{-1}((b_1...b_k))$ is an integer $b$ such that $b \equiv_{n_i} b_i$ for all $i$. This is simply an application of the Chinese remainder theorem.    
+\\
 \item Prove {\bfseries Multiplicativity of the Totient}
 \\
+From part a, we have that $Z_P^*$ is in bijection with $P^*$. So $\varphi(p)=|P^*|$. In order for $(c_1...c_k) \in P^*$ to be a unit each $c_i$ must be a unit in $Z_{n_i}$, as it's inverse is $(c^{-1}_1...c^{-1}_k)$. There are $\varphi(n_i)$ units in $Z_{n_i}$ and so $|P^*|$ is the product of all these $\varphi(n_i)$.
+\\
 \item Why is the calculation of $\varphi(p^n)$ correct
+\\
+If a number is a multiple of $p$ then that number is not relatively prime with $p^n$. Conversely is a number is not relatively prime with $p^n$ than their gcd must be divisible by $p$ since all divisors of $p^n$ are powers of $p$ less than $p^n$. There are $p^{n-1}$ multiple of $p$ less than $p^n$ and other numbers are relatively prime with $p^n$ so $\varphi(p^n)=p^n-p^{n-1}=p^n(1-\frac{1}{p}$.
 \\
 \item Prove BB Corollary 3.5.6 - Let $n$ be a positive integer which has the prime decomposition $n = p^{\alpha_1}_1p^{\alpha_2}_2 \dots p^{\alpha_m}_m$ where $p_1 < p_2 < \dots < p_m$.  Then
 $$ \varphi(n) = n(1 - \tfrac{1}{p_1})(1 - \tfrac{1}{p_2}) \dots (1 - \tfrac{1}{p_m}).$$
 \\
-We need to count the generators of $\bold{Z}_n$.  To do so, we will use the following  isomorphism from BB 3.5.5:\\
-$$\bold{Z}_{p^{\alpha_1}_1} \times \bold{Z}_{p^{\alpha_2}_2} \times \dots \times \bold{Z}_{p^{\alpha_m}_m} \cong \bold{Z}_n$$\\
-Since an element of this product has order $n$ if and only if it is a generator, we have that the least common multiple of the order of its components in their respective groups must be $n$.  
-\\
-REWRITE FROM HERE . . .
-\\
-If $b = ([b_1]_{p^{\alpha_1}_1}), [b_2]_{p^{\alpha_2}_2}, \dots ,[b_m]_{p^{\alpha_m}_m})$ is an element of the direct product, then the order of each $[b_i]_{p^{\alpha_i}_i}$ must be a divisor of $p^{\alpha_i}_i$, say ${p^{\alpha_i}_\beta}$, with $\beta_i \leq \alpha_i$.  Then $b$ has order ${p^{\beta_1}_1} {p^{\beta_2}_2} \dots {p^{\beta_m}_m}$, and for this order to be equal to $n$ we must have $\beta_i = \alpha_i$ for each $i$.  It follows that an element of the direct product is a generator if and only if each of its components is a generator in its respective cyclic group of primepower order.  Thus the totoal number of possible generators is equal to the product of the number of generators in each component.  We have reduced the problem to counting the number of generators in $\bold{Z}_{p^\alpha}$, for any prime $p$.  The elemtns that are not generators are the multiples of $p$, and among the $p^\alpha$ elements of $\bold{Z}_{p^\alpha}$ there are $p^{\alpha-1}$ such multiples.  Thus
-$$ \varphi(p^{\alpha}) = p^{\alpha} - p^{\alpha - 1} = p^{\alpha}(1 - \tfrac{1}{p})$$
-\\
-Taking the product of these values for each of the primes in the decomposition of $n$ gives the formula we want.
+$n=p^{e_1}_1 p^{e_2}_2...p^{e_k}_k$ where all the $p_i$ are different and therefore relatively prime. So by multiplicativity of the totient we have $\varphi(n)=\varphi(p^{e_1}_1)...\varphi(p^{e_k}_k)$. And by part c, that product equals (after rearranging terms) $p^{e_1}_1 p^{e_2}_2...p^{e_k}_k (1-\frac{1}{p_1})...(1-\frac{1}{p_k}) = n(1-\frac{1}{p_1})...(1-\frac{1}{p_k})$. 
 \\
 $\square$
 \end{enumerate}
